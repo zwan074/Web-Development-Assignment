@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Variables</title>
+    <script src="JavaScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Welcome to Javascript Tutorial</h1>
+        <hr>
+        <a href="Main.html" class="navButton">< PREVIOUS</a>
+        <a href="DataTypes.html" class="navButton">NEXT ></a>
+        <br />
+        
+    </header>
+
+    <script>
+        createSideNav()
+    </script>
+    <section>
+
+        <h2>Javascript Variables </h2>
+
+        <h3> A variable </h3>
+        <p>
+            A variable is a “named storage” for data. We can use variables to store goodies,
+            visitors and other data. <br />
+            <br />
+            To create a variable in JavaScript, we need to use the <span class=" let">let</span> keyword. <br>
+
+            The statement below creates (in other words:
+            declares or defines) a variable with the name “message”:<br />
+
+        </p>
+
+        <div class="code_box">
+            <span class=" let">let</span> message;
+        </div>
+        <p>
+            Now we can put some data into it by using the assignment operator  <span style="background-color: #f5f2f0">=</span>:
+        </p>
+
+        <div class="code_box">
+
+            <span class=" let">let</span> message;
+            <br />
+            <br />
+            message = <span style="color: #690 ">'Hello'</span>; <span class="comment">// store the string</span>
+
+
+        </div>
+
+        <p>
+            The string is now saved into the memory area associated with the variable. We can access it using the variable name:
+        </p>
+
+        <div class="code_box">
+            <p>
+                <span class=" let">let</span> message;
+                <br />
+                message = <span style="color: #690 ">'Hello'</span>;
+                <br />
+                <br />
+                alert(message); <span class="comment">// shows the variable content</span>
+
+            </p>
+
+            <button type="button" onclick="VariblesCodeDemo1 ()">Run Code</button>
+
+        </div>
+
+
+        <p>
+
+            To be concise we can merge the variable declaration and assignment into a single line:
+        </p>
+
+        <div class="code_box">
+            <p>
+                <span class=" let">let</span> message = <span style="color: #690 ">'Hello'</span>;
+                <span class="comment">// define the variable and assign the value</span>
+                <br />
+                <br />
+                alert(message);
+                <span class="comment">// Hello!</span>
+
+            </p>
+
+            <button type="button" onclick="VariblesCodeDemo2 ()">Run Code</button>
+
+
+        </div>
+
+        <h3> Constants </h3>
+        <p>To declare a constant (unchanging) variable, one can use const instead of let:</p>
+        <div class="code_box">
+            <p>
+                <span class=" let">const</span>  myBirthday = <span style="color: #690 ">'18.04.1982'</span>;
+            </p>
+
+        </div>
+
+        <p>
+            Variables declared using const are called “constants”. They cannot be changed. An attempt to do it would cause an error:
+        </p>
+
+        <div class="code_box">
+            <p>
+                <span class=" let">const</span> myBirthday = <span style="color: #690 ">'18.04.1982'</span>;
+                <br />
+                <br />
+                myBirthday = <span style="color: #690 ">'18.04.2000'</span>;
+                <span class="comment">// error, can't reassign the constant!</span>
+            </p>
+
+            <button type="button" onclick="VariblesCodeDemo3 ()">Run Code</button>
+
+        </div>
+
+        <p>
+            When a programmer is sure that the variable should never change, they can use
+            <span class=" let">const</span> to guarantee it,  and also to clearly show that fact to everyone.
+        </p>
+
+        <h3>Name things right</h3>
+        <p>
+            Talking about variables, there’s one more extremely important thing.<br /><br />
+
+            Please name the variables sensibly. Take time to think if needed.<br /><br />
+
+            Variable naming is one of the most important and complex skills in programming.
+            A quick glance at variable names can reveal which code is written by a beginner and which by an experienced developer.<br /><br />
+
+            In a real project, most of the time is spent on modifying and extending the existing code base,
+            rather than writing something completely separate from scratch. And when we return to the code after some time of
+            doing something else, it’s much easier to find information that is well-labeled. Or, in other words,
+            when the variables have good names.<br /><br />
+
+            Please spend some time thinking about the right name for a variable before declaring it. This will repay you a lot.<br /><br />
+
+            Some good-to-follow rules are:<br />
+        </p>
+        <ul>
+            <li>
+                Use human-readable names like <span style="background-color: #f5f2f0">userName</span> or
+                <span style="background-color: #f5f2f0">shoppingCart</span>.
+            </li>
+            <li>
+                Stay away from abbreviations or short names like <span style="background-color: #f5f2f0">a</span>,
+                <span style="background-color: #f5f2f0">b</span>, <span style="background-color: #f5f2f0">c</span>, unless you really know what you’re doing.
+            </li>
+            <li>
+                Make the name maximally descriptive and concise. Examples of bad names are <span style="background-color: #f5f2f0">
+                    data
+                </span> and <span style="background-color: #f5f2f0">value</span>. Such a name says nothing.
+                It is only ok to use them if it’s exceptionally obvious from the context which data or value is meant.
+            </li>
+            <li>
+                Agree on terms within your team and in your own mind.
+                If a site visitor is called a “user” then we should name related variables like <span style="background-color: #f5f2f0">
+                    currentUser
+                </span>  or <span style="background-color: #f5f2f0">newUser</span> ,
+                but not <span style="background-color: #f5f2f0">currentVisitor</span> or a <span style="background-color: #f5f2f0"> newManInTown</span> .
+            </li>
+        </ul>
+
+        <p>
+            Sounds simple? Indeed it is, but creating good descriptive-and-concise names in practice is not. Go for it.
+        </p>
+
+
+
+        <h3>Summary</h3>
+        <p>We can declare variables to store data. That can be done using <span class=" let">let </span>or <span class=" let">const</span>.</p>
+        <ul>
+            <li>
+                <span class=" let">let</span> – is a modern variable declaration. The code must be in strict mode to use let in Chrome (V8).
+            </li>
+            <li>
+                <span class=" let">const</span> – is like let, but the value of the variable can’t be changed.
+            </li>
+
+        </ul>
+
+        <p>
+            Variables should be named in a way that allows us to easily understand what’s inside.
+        </p>
+        <hr />
+        <h3>
+            Tasks
+        </h3>
+        <h4>1. Working with variables </h4>
+        <ol>
+            <li>
+                Declare two variables: admin and name.
+            </li>
+            <li>
+                Assign the value "John" to name.
+            </li>
+            <li>
+                Copy the value from name to admin.
+            </li>
+            <li>
+                Show the value of admin using alert (must output “John”).
+            </li>
+        </ol>
+
+
+        <script>
+            SolutionAndAnswer(".solution1", ".answer1")
+        </script>
+
+
+        <button class="solution1"> Solution </button>
+
+        <div class="answer1">
+
+            <span class=let>let</span> admin,name;
+            <span class=comment> // can declare two variables at once</span><br><br>
+            name = <span style="color: #690 ">"John"</span>;<br><br>
+            admin = name;<br><br>
+            alert( admin ); <span class=comment>//"John"</span>
+
+        </div>
+
+        <h4>2. Giving the right name</h4>
+        <ol>
+            <li>
+                Create the variable with the name of our planet. How would you name such a variable?
+            </li>
+            <li>
+                Create the variable to store the name of the current visitor. How would you name that variable?
+            </li>
+        </ol>
+
+        <script>
+            SolutionAndAnswer(".solution2", ".answer2")
+        </script>
+
+        <button class="solution2"> Solution </button>
+
+        <div class="answer2">
+
+            First, the variable for the name of our planet.<br /><br />
+
+            That’s simple:<br /><br />
+
+
+            <span class=let>let</span> ourPlanetName = <span style="color: #690 ">"Earth"</span>;<br /><br />
+            Note, we could use a shorter name planet, but it might be not obvious
+
+            what planet it refers to. It’s nice to be more verbose. At least until the variable isNotTooLong.<br /><br />
+
+            Second, the name of the current visitor:<br /><br />
+
+            <span class=let>let</span> currentUserName = <span style="color: #690 ">John"</span>; <br /><br />
+
+            Again, we could shorten that to <span class="comment">userName</span> if we know for sure that the user is current.<br /><br />
+
+            Modern editors and autocomplete make long variable names easy to write.<br /><br />
+
+            Don’t save on them. A name with 3 words in it is fine. <br /><br />
+
+            And if your editor does not have proper autocompletion, get a new one.
+
+        </div>
+
+        <script>createFeedBackForm()</script>
+
+        <footer>
+            End of section
+        </footer>
+
+
+    </section>
+
+</body>
+</html>

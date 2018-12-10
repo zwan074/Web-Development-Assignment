@@ -1,0 +1,162 @@
+﻿body {
+    margin: 0px auto;
+    padding: 0px;
+    width: 1000px;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color:  #fff;
+}
+
+header {
+    position: fixed;
+    background-color:  white;
+    display: block;
+    margin: 0px, auto;
+    width: 1000px;
+    padding: 0;
+    
+}
+
+footer {
+    border-top: 1px solid black;
+    clear: both;
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 10px;
+    padding: 10px;
+}
+
+h1{
+
+    text-align: center;
+}
+
+h2 {
+    margin-left: 220px;
+    text-align: justify;
+    display:block;
+}
+
+section {
+    display: block;
+    margin-left: 220px;
+    float: left;
+    height: 30px;
+    text-align: justify;
+    padding-top: 120px;
+    font-size: 18px;
+}
+
+
+section p, section h1 {
+    
+}
+
+nav {
+
+    box-sizing: border-box;
+    display: block;
+    height: 700px;
+    line-height: 22.5px;
+    position: fixed !important;
+    text-size-adjust: 100%;
+    top: 100px;
+    width: 100px;
+    z-index: 1;
+
+}
+
+nav ul {
+    color: #000 ;
+    background-color: white;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    padding-top: 40px;
+}
+
+
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    color: blue;
+
+}
+
+
+
+nav ul li a:hover {
+    background-color: red;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+.navButton {
+    position: relative;
+    margin-left: 220px;
+    width: 25%;
+    border-color: #ae4141;
+    color: red;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    border: 1px solid #cc0000;
+    text-decoration: none;
+    text-align: center;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.navButton:hover {
+    color: white;
+    background-color:red;
+}
+
+.code_box {
+    font: 18px/20px Consolas,Lucida Console,Menlo,Monaco,monospace;
+    margin: 0;
+    padding: 1em;
+    margin: 1.5em 0;
+    overflow: auto;
+    background: #f5f2f0;
+}
+
+.let {
+    color: #4286f4;
+    font-weight: 700;
+}
+
+.comment {
+    color: #708090;
+}
+
+
+.solution1, .answer1, .solution2, .answer2 {
+
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    display: block ;
+    margin: 18px 0;
+    padding: 4px 12px;
+    border-radius: 15px;
+    border: 2px solid #568dca;
+    font: inherit;
+    line-height: inherit;
+    line-height: 18px;
+    text-decoration: none;
+}
+
+.solution1:hover, .solution2:hover {
+    color: red;
+}
+.answer1,.answer2 {
+    background-color: aliceblue;
+    padding: 50px;
+    display: none;
+}
+

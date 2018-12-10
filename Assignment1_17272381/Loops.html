@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Loops</title>
+    <script src="JavaScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Javascript Tutorial</h1>
+        <hr>
+        <a href="Conditions.html" class="navButton">< PREVIOUS</a>
+        <a href="Functions.html" class="navButton">NEXT ></a>
+        <br />
+
+    </header>
+
+    <script>
+        createSideNav()
+    </script>
+
+
+    <section>
+
+        <h2>Javascript Loops</h2>
+        <p>
+            Loops are handy, if you want to run the same code over and over again, each time with a different value.<br /><br />
+
+
+            JavaScript supports different kinds of loops:<br /><br />
+            <ul>
+                <li>for - loops through a block of code a number of times</li>
+                <li>for/in - loops through the properties of an object</li>
+                <li>while - loops through a block of code while a specified condition is true</li>
+                <li>
+                    do/while - also loops through a block of code while a specified condition is true
+                </li>
+            </ul>
+        </p>
+
+        <h3>The For Loop.</h3>
+
+        <p>The for loop has the following syntax:</p>
+
+        <div class=" code_box">
+            for (statement 1; statement 2; statement 3) {
+            code block to be executed
+            }
+
+        </div>
+
+        <ul>
+            <li>Statement 1 is executed (one time) before the execution of the code block.</li>
+            <li>Statement 2 defines the condition for executing the code block.</li>
+            <li>
+                Statement 3 is executed (every time) after the code block has been executed.
+            </li>
+
+        </ul>
+
+
+
+
+
+        <div class=" code_box">
+            for (i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+            }
+        </div>
+
+        <p>
+            From the example above, you can read:<br /><br />
+
+            Statement 1 sets a variable before the loop starts (var i = 0).<br /><br />
+
+            Statement 2 defines the condition for the loop to run (i must be less than 5).<br /><br />
+
+            Statement 3 increases a value (i++) each time the code block in the loop has been executed.<br /><br />
+        </p>
+        <h3>The For/In Loop</h3>
+        <p>The JavaScript for/in statement loops through the properties of an object:</p>
+
+        <div class=" code_box">
+            var person = {fname:"John", lname:"Doe", age:25};
+
+            var text = "";
+            var x;
+            for (x in person) {
+            text += person[x];
+            }
+        </div>
+
+
+
+
+        <h3>The While Loop</h3>
+        <p>
+            The while loop loops through a block of code as long as a specified condition is true.
+        </p>
+
+        <div class=" code_box">
+            Syntax
+            while (condition) {
+            code block to be executed
+            }
+
+        </div>
+        <p>
+            Example<br /><br />
+
+            In the following example, the code in the loop will run,
+            over and over again, as long as a variable (i) is less than 10:<br /><br />
+
+        </p>
+
+
+
+
+        <div class=" code_box">
+
+            while (i < 10) {
+            text += "The number is " + i;
+            i++;
+            }
+
+        </div>
+
+
+        <h3>The Do/While Loop</h3>
+
+        <p>
+            The do/while loop is a variant of the while loop. This loop will execute the code block once,
+            before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+            Syntax
+        </p>
+        <div class=" code_box">
+            do {
+            code block to be executed
+            }
+            while (condition);
+
+
+        </div>
+            
+        <p>
+            Example
+
+            The example below uses a do/while loop. The loop will always be executed at least once,
+            even if the condition is false, because the code block is executed before the condition is tested:
+
+
+        </p>
+
+
+        <div class=" code_box">
+
+            do {
+            text += "The number is " + i;
+            i++;
+            }
+            while (i < 10);
+
+        </div>
+
+        <p>
+
+            Do not forget to increase the variable used in the condition, otherwise the loop will never end!
+
+            Comparing For and While
+
+            If you have read the previous chapter, about the for loop, you will discover that a while loop is much the same as a for loop, with statement 1 and statement 3 omitted.
+
+            The loop in this example uses a for loop to collect the car names from the cars array:
+
+        </p>
+
+        <div class=" code_box">
+            var cars = ["BMW", "Volvo", "Saab", "Ford"];
+            var i = 0;
+            var text = "";
+
+            for (;cars[i];) {
+            text += cars[i] + "<br>";
+            i++;
+            }
+
+        </div>
+
+        <p>
+
+            The loop in this example uses a while loop to collect the car names from the cars array:
+
+        </p>
+
+        <div class=" code_box">
+            var cars = ["BMW", "Volvo", "Saab", "Ford"];
+            var i = 0;
+            var text = "";
+
+            while (cars[i]) {
+            text += cars[i] + "<br>";
+            i++;
+            }
+
+
+
+        </div>
+
+    </section>
+    
+
+
+</body>
+</html>
