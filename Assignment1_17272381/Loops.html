@@ -67,9 +67,9 @@
 
 
         <div class=" code_box">
-            for (i = 0; i < 5; i++) {
-            text += "The number is " + i + "<br>";
-            }
+            for (i = 0; i < 5; i++) {<br/>
+            text += "The number is " + i + "<br>";<br/>
+            }<br/>
         </div>
 
         <p>
@@ -85,12 +85,12 @@
         <p>The JavaScript for/in statement loops through the properties of an object:</p>
 
         <div class=" code_box">
-            var person = {fname:"John", lname:"Doe", age:25};
+            var person = {fname:"John", lname:"Doe", age:25};<br/><br/>
 
-            var text = "";
-            var x;
-            for (x in person) {
-            text += person[x];
+            var text = "";<br/>
+            var x;<br/>
+            for (x in person) {<br/>
+            text += person[x];<br/>
             }
         </div>
 
@@ -103,10 +103,10 @@
         </p>
 
         <div class=" code_box">
-            Syntax
-            while (condition) {
-            code block to be executed
-            }
+            Syntax<br/>
+            while (condition) {<br/>
+            code block to be executed<br/>
+            }<br/>
 
         </div>
         <p>
@@ -134,24 +134,24 @@
 
         <p>
             The do/while loop is a variant of the while loop. This loop will execute the code block once,
-            before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+            before checking if the condition is true, then it will repeat the loop as long as the condition is true.<br/><br/>
 
             Syntax
         </p>
         <div class=" code_box">
-            do {
-            code block to be executed
-            }
-            while (condition);
+            do {<br/>
+            code block to be executed<br/>
+            }<br/>
+            while (condition);<br/><br/>
 
 
         </div>
             
         <p>
-            Example
+            Example<br/><br/>
 
-            The example below uses a do/while loop. The loop will always be executed at least once,
-            even if the condition is false, because the code block is executed before the condition is tested:
+            The example below uses a do/while loop. The loop will always be executed at least once,<br/>
+            even if the condition is false, because the code block is executed before the condition is tested:<br/>
 
 
         </p>
@@ -159,35 +159,37 @@
 
         <div class=" code_box">
 
-            do {
-            text += "The number is " + i;
-            i++;
-            }
-            while (i < 10);
+            do {<br/>
+            text += "The number is " + i;<br/>
+            i++;<br/>
+            }<br/>
+            while (i < 10);<br/>
 
         </div>
 
         <p>
 
-            Do not forget to increase the variable used in the condition, otherwise the loop will never end!
+            Do not forget to increase the variable used in the condition, otherwise the loop will never end!<br/><br/>
 
-            Comparing For and While
+            Comparing For and While<br/><br/>
 
-            If you have read the previous chapter, about the for loop, you will discover that a while loop is much the same as a for loop, with statement 1 and statement 3 omitted.
+            If you have read the previous chapter, about the for loop, 
+            you will discover that a while loop is much the same as a for loop, 
+            with statement 1 and statement 3 omitted.<br/><br/>
 
-            The loop in this example uses a for loop to collect the car names from the cars array:
+            The loop in this example uses a for loop to collect the car names from the cars array:<br/>
 
         </p>
 
         <div class=" code_box">
-            var cars = ["BMW", "Volvo", "Saab", "Ford"];
-            var i = 0;
-            var text = "";
+            var cars = ["BMW", "Volvo", "Saab", "Ford"];<br/>
+            var i = 0;<br/><br/><br/>
+            var text = "";<br/><br/>
 
-            for (;cars[i];) {
-            text += cars[i] + "<br>";
-            i++;
-            }
+            for (;cars[i];) {<br/>
+            text += cars[i] + "<br>";<br/>
+            i++;<br/>
+            }<br/>
 
         </div>
 
@@ -198,14 +200,14 @@
         </p>
 
         <div class=" code_box">
-            var cars = ["BMW", "Volvo", "Saab", "Ford"];
-            var i = 0;
-            var text = "";
+            var cars = ["BMW", "Volvo", "Saab", "Ford"];<br/>
+            var i = 0;<br/>
+            var text = "";<br/>
 
-            while (cars[i]) {
-            text += cars[i] + "<br>";
-            i++;
-            }
+            while (cars[i]) {<br/>
+            text += cars[i] + "<br>";<br/>
+            i++;<br/>
+            }<br/>
 
 
 
