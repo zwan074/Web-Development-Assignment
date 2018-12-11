@@ -23,8 +23,8 @@ function createFeedBackForm() {
         "<input type=text id=emailadd required=required placeholder=\"e.g. abc@gmail.co.nz\" /></p>" +
 
         "<p><textarea id=message rows=10 cols=30>Please leave your feedback here</textarea></p>" +
-
-        "<input type=submit value=Submit onclick=formValidation() /></form><br />");
+        
+        "<button type=button value=Submit onclick=formValidation()>Submit</button></form><br />");
     
 }
 
@@ -60,7 +60,7 @@ function formValidation() {
 
 function ValidateMessage(umessage) {
     let message = "Please leave your feedback here";
-    if (umessage.match(message)) {
+    if (umessage.match(message) | umessage == "") {
         alert('Please enter your message');
         uname.focus();
         return false;
@@ -76,11 +76,11 @@ function ValidateName(uname) {
     if (uname.match(letters)) {
         return true;
     }
-    else if (uname.match("")) {
+    else if (uname == "") {
 
         alert('Please enter username');
         uname.focus();
-
+        return false;
     }
 
     else {
@@ -98,11 +98,11 @@ function ValidateEmail(uemail) {
         return true;
     }
 
-    else if (uemail.match("")) {
+    else if (uemail=="") {
 
         alert('Please enter your email address');
         uname.focus();
-
+        return false;
     }
 
     else {
@@ -316,4 +316,66 @@ function ConditionsCodeSolution2() {
         alert(0);
     }
 
+}
+
+
+function LoopsCodeDemo1() {
+    let i;
+    for (i = 0; i < 5; i++) {
+        alert(i);
+    }
+    
+
+}
+
+function LoopsCodeDemo2() {
+
+    let person = { fname: "John", lname: "Doe", age: 25 };
+    let x;
+    for (x in person) {
+        alert(person[x]);
+    } 
+
+
+}
+
+function LoopsCodeDemo3() {
+
+    let i =0;
+    while (i < 10) {
+        alert("The number is " + i);
+        i++;
+    }
+
+
+}
+
+function LoopsCodeDemo4() {
+
+    let i = 0;
+    do {
+        alert("The number is " + i);
+        i++;
+    }
+    while (i < 10);
+    
+}
+
+function LoopsSolution1() {
+    let i = 0;
+    while (i < 3) {
+        alert(`number ${i}!`);
+        i++;
+    }
+
+
+}
+
+function LoopsSolution2() {
+    for (let i = 2; i <= 10; i++) {
+        if (i % 2 == 0) {
+            alert(i);
+        }
+    }
+    
 }
