@@ -1,6 +1,6 @@
 ﻿"use strict"
 
-
+//script to generate side navigation content
 function createSideNav() {
     document.write("<nav><ul>" +
         "<li><a target=_top href= Main.html >Home</a></li>" +
@@ -13,6 +13,7 @@ function createSideNav() {
 
 }
 
+//script to generate feedback form at bottom to interact with visitors.
 function createFeedBackForm() {
     document.write(
         "<hr /><form>" +
@@ -28,18 +29,7 @@ function createFeedBackForm() {
     
 }
 
-
-function SolutionAndAnswer(solutionNum, answerNum) {
-    $(document).ready(function () {
-        $(solutionNum).click(function () {
-            $(answerNum).slideToggle("quick");
-        });
-    });
-
-}
-
-
-
+//script to validate username , email, and feedback message input
 function formValidation() {
 
     let uname = document.getElementById("username").value;
@@ -58,6 +48,7 @@ function formValidation() {
     return false;
 }
 
+// validate input in message box
 function ValidateMessage(umessage) {
     let message = "Please leave your feedback here";
     if (umessage.match(message)) {
@@ -70,9 +61,9 @@ function ValidateMessage(umessage) {
     }
 }
 
-
+//validate input in name box
 function ValidateName(uname) {
-    let letters = /^[A-Za-z]+$/;
+    let letters = /^[A-Za-z]+$/;//name format regex
     if (uname.match(letters)) {
         return true;
     }
@@ -91,9 +82,9 @@ function ValidateName(uname) {
 }
 
 
-
+//validate input in email box
 function ValidateEmail(uemail) {
-    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;//two forward slashes contains a regular expression. 
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;//exmail format regex. 
     if (uemail.match(mailformat)) {
         return true;
     }
@@ -112,8 +103,17 @@ function ValidateEmail(uemail) {
     }
 } 
 
+//Display and hide content by clicking solution by using jQuerry. 
+function SolutionAndAnswer(solutionNum, answerNum) {
+    $(document).ready(function () {
+        $(solutionNum).click(function () {
+            $(answerNum).slideToggle("quick");
+        });
+    });
 
+}
 
+//--demo code and tasks solution in Varibles Section
 
 function VariblesCodeDemo1 () {
 
@@ -138,7 +138,7 @@ function VariblesCodeDemo3() {
 
 }
 
-
+//--demo code and tasks solution in Data Types Section
 function DataTypesCodeDemo_1_and_2() {
 
     alert("Infinity");
@@ -169,11 +169,12 @@ function DataTypesCodeDemo6() {
 
 function DataTypesCodeDemo7() {
 
-    let isGreater = 4 > 1;
 
     alert(isGreater); 
 
 }
+
+//--demo code and tasks solution in Strings Section
 
 function StringsCodeDemo1() {
 
@@ -266,7 +267,7 @@ function StringsCodeSolution2() {
 
 }
 
-
+//--demo code and tasks solution in Conditions Section
 function ConditionsCodeDemo1() {
 
     let year = prompt('In which year was ECMAScript-2015 specification published?', '');
