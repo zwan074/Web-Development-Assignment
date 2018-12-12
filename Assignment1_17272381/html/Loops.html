@@ -11,7 +11,6 @@
 <body>
 
     <header>
-        <img src="../img/Character Table.PNG" />
         <h1>Welcome to Javascript Tutorial</h1>
         <hr>
         <a href="Conditions.html" class="navButton">< PREVIOUS</a>
@@ -29,16 +28,16 @@
 
         <h2>Javascript Loops</h2>
         <p>
-            Loops are handy, if you want to run the same code over and over again, each time with a different value.<br /><br />
+            It is handy to use Loops to iterate functions<br /><br />
 
             JavaScript supports different kinds of loops:
         </p>
         <ul>
             <li><span class=" highlight">for</span> - loops through a block of code a number of times</li>
-            <li><span class=" highlight">for/in</span> - loops through the properties of an object</li>
+            <li><span class=" highlight">for/in</span> - loops through the items of an object</li>
             <li><span class=" highlight">while</span> - loops through a block of code while a specified condition is true</li>
             <li>
-                <span class=" highlight">do/while</span> - also loops through a block of code while a specified condition is true
+                <span class=" highlight">do/while</span> - another format of while loop
             </li>
         </ul>
 
@@ -58,15 +57,13 @@
         </div>
 
         <ul>
-            <li><span class=" highlight">Statement 1</span> is executed (one time) before the execution of the code block.</li>
-            <li><span class=" highlight">Statement 2</span> defines the condition for executing the code block.</li>
+            <li><span class=" highlight">statement 1</span> is executed (one time) before the execution of the code block.</li>
+            <li><span class=" highlight">statement 2</span> defines the check condition for executing the code block.</li>
             <li>
-                <span class=" highlight">Statement 3</span> is executed (every time) after the code block has been executed.
+                <span class=" highlight">statement 3</span> is executed (every time) after the code block has been executed.
             </li>
 
         </ul>
-
-
 
         <div class=" code_box">
             <span class=" let ">let</span> i;<br />
@@ -80,27 +77,26 @@
         <p>
             From the example above, you can read:<br /><br />
 
-            <span class=" highlight">Statement 1</span> sets a variable before the loop starts (var i = 0).<br /><br />
+            <span class=" highlight">Statement 1</span> sets a variable before the loop starts (let i = 0).<br /><br />
 
             <span class=" highlight">Statement 2</span> defines the condition for the loop to run (i must be less than 5).<br /><br />
 
             <span class=" highlight">Statement 3</span> increases a value (i++) each time the code block in the loop has been executed.<br /><br />
         </p>
+        
         <h3>The For/In Loop</h3>
-        <p>The JavaScript for/in statement loops through the properties of an object:</p>
+        <p>The JavaScript for/in statement loops through the items of an object:</p>
 
         <div class=" code_box">
-            <span class=" let ">let</span> person =
-            {fname:<span class=" string">"John"</span>, lname:<span class=" string">"Doe"</span>,
-            age:<span class=" number">25</span>};<br /><br />
+            <span class=" let ">let</span> student =
+            {firstName:<span class=" string">"Jim"</span>, lastName:<span class=" string">"Dee"</span>,
+            age:<span class=" number">20</span>};<br /><br />
             <span class=" let ">let</span> x;<br />
-            <span class=" let ">for</span> (x <span class=" let ">in</span> person) {<br />
-            alert(person[x]);<br />
+            <span class=" let ">for</span> (x <span class=" let ">in</span> student) {<br />
+            alert(student[x]);<br />
             }<br /><br />
             <button type="button" onclick="LoopsCodeDemo2()">Run Code</button>
         </div>
-
-
 
 
         <h3>The "While" Loop</h3>
@@ -110,17 +106,15 @@
         </p>
 
         <div class=" code_box">
-            Syntax<br /><br />
             <span class=" let ">while</span> (condition) {<br />
             code block to be executed<br />
             }<br />
 
         </div>
         <p>
-            Example<br /><br />
+            Example:<br /><br />
 
-            In the following example, the code in the loop will run,
-            over and over again, as long as a variable (i) is less than 10:<br /><br />
+            In the following example, the code in the loop will run if i is less than 10,:<br /><br />
 
         </p>
 
@@ -138,15 +132,13 @@
         <h3>The "Do/While" Loop</h3>
 
         <p>
-            The <span class=" highlight">do/while</span>
-            loop is a variant of the while loop. This loop will execute the code block once,<br />
-            before checking if the condition is true, then it will repeat the loop as long as the condition is true.<br /><br />
-
-
+            The <span class=" highlight">do/while</span> 
+            loop is another version of the while loop. This loop will execute the code block in "do" block once,<br />
+            before checking if the condition is in "while" block true<br />
         </p>
 
         <div class=" code_box">
-            Syntax<br /><br />
+            
             <span class=" let ">do</span> {<br />
             code block to be executed<br />
             }<br />
@@ -156,10 +148,6 @@
 
         <p>
             Example<br /><br />
-
-            The example below uses a do/while loop. The loop will always be executed at least once,<br />
-            even if the condition is false, because the code block is executed before the condition is tested:
-
         </p>
 
 
@@ -174,24 +162,23 @@
         </div>
 
         <p>
-            Do not forget to increase the variable used in the condition, otherwise the loop will never end!
+            It needs to declare a halt condition, otherwise the loop will run forever!
         </p>
+    
         <h3>Comparing For and While</h3>
         <p>
-            If you have read the previous chapter,
-            about the for loop, you will discover that a while loop is
-            much the same as a for loop, with statement 1 and statement 3 omitted.<br /><br />
+            For and While loop could be transferred each other by adjusting their formats<br /><br />
 
-            The loop in this example uses a for loop to collect the car names from the cars array:
+            The loop in this example uses a for loop to collect the student names from the students array:
 
         </p>
 
         <div class=" code_box">
-            <span class=" let ">let</span> cars = [<span class=" string">"BMW", "Volvo", "Saab", "Ford"</span>];<br />
+            <span class=" let ">let</span> students = [<span class=" string">"Bob", "Vin", "Sam", "Fen"</span>];<br />
             <span class=" let ">let</span> i = <span class=" number">0</span>;<br />
 
-            <span class=" let ">for</span> (;cars[i];) {<br />
-            alert ( cars[i]);<br />
+            <span class=" let ">for</span> (;students[i];) {<br />
+            alert ( students[i]);<br />
             i++;<br />
             }<br />
 
@@ -202,18 +189,18 @@
         </p>
 
         <div class=" code_box">
-            <span class=" let ">let</span> cars = [<span class=" string">"BMW", "Volvo", "Saab", "Ford"</span>];<br />
+            <span class=" let ">let</span> students = [<span class=" string">"Bob", "Vin", "Sam", "Fen"</span>];<br />
             <span class=" let ">let</span> i = <span class=" number">0</span>;<br />
 
-            <span class=" let ">while</span> (cars[i]) {<br />
-            alert(cars[i]) ;<br />
+            <span class=" let ">while</span> (students[i]) {<br />
+            alert(students[i]) ;<br />
             i++;<br />
             }
 
         </div>
 
         <h3>Summary</h3>
-        <p>We covered 3 types of loops:</p>
+        <p> 3 types of loops have been covered in this section:</p>
 
         <ul>
             <li>
@@ -226,15 +213,10 @@
 
         <p>
 
-            To make an “infinite” loop, usually the <span class=" highlight">while(true)</span> construct is used.
-            Such a loop, just like any other, can be stopped with the <span class=" highlight">break</span> directive.<br /><br />
+            Usually the <span class=" highlight">while(true)</span> construct an “infinite” loop.
+            It can be stopped with the <span class=" highlight">break</span>  in such loop.<br /><br />
 
-            If we don’t want to do anything on the current iteration and would like to forward
-            to the next one, the <span class=" highlight">continue</span> directive does it.<br /><br />
-
-            <span class=" highlight">break/continue</span> support labels before the loop.
-            A label is the only way for break/continue
-            to escape the nesting and go to the outer loop.<br /><br />
+            If we can pass current content by using the <span class=" highlight">continue</span> .<br /><br />
 
         </p>
 
@@ -246,14 +228,14 @@
             Tasks
         </h3>
 
-        <h4>1.Replace "for" with "while"</h4>
+        <h4>1.Rewrite "for" with "while"</h4>
         <p>
-            Rewrite the code changing the<span class=" highlight">for</span> loop to
-                                         <span class=" highlight">while</span> without altering its behavior (the output should stay same).
+            Rewrite the code <span class=" highlight">for</span> loop to
+            <span class=" highlight">while</span> without changing its function (the output should stay same).
         </p>
         <div class=" code_box">
             <span class=" let ">for</span> (<span class=" let ">let</span>
-            i = <span class=" number">0</span>; i < <span class=" number">3</span>; i++) {<br />
+            i = <span class=" number">0</span>; i < <span class=" number">5</span>; i++) {<br />
             alert( <span class=" string">`number ${i}!`</span> );<br />
             }
         </div>
@@ -266,17 +248,17 @@
 
         <div class="answer1">
             <span class=" let ">let</span> i = <span class=" number">0</span>;<br />
-            <span class=" let ">while</span> (i < <span class=" number">3</span>) {<br />
+            <span class=" let ">while</span> (i < <span class=" number">5</span>) {<br />
             alert( <span class=" string">`number ${i}!`</span> );<br />
             i++;<br />
             }<br /><br />
             <button type="button" onclick="LoopsSolution1()">Run Code</button>
         </div>
 
-        <h4>2.Output even numbers in the loop</h4>
+        <h4>2.Generate even numbers</h4>
         <p>
-            Use the <span class=" highlight">for</span> loop to output even numbers
-            from <span class=" highlight">2</span> to <span class=" highlight">10</span>.
+            Use the <span class=" highlight">for</span> loop to generate even numbers
+            from <span class=" highlight">2</span> to <span class=" highlight">11</span>.
         </p>
 
 
@@ -288,7 +270,7 @@
 
         <div class="answer2">
             <span class=" let ">for</span> (<span class=" let ">let</span>
-            i = <span class=" number">2</span>; i <= <span class=" number">10</span>; i++) {<br />
+            i = <span class=" number">2</span>; i <= <span class=" number">11</span>; i++) {<br />
             <span class=" let ">if</span> (i % <span class=" number">2</span> == 0) {<br />
             alert( i );<br />
             }<br />
