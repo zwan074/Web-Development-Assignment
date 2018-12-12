@@ -189,9 +189,9 @@ function StringsCodeDemo1() {
 function StringsCodeDemo2() {
 
     let guestList = `Guests:
-     * John
-     * Pete
-     * Mary
+     * Jim
+     * Pea
+     * Mia
     `;
 
     alert(guestList); 
@@ -200,14 +200,14 @@ function StringsCodeDemo2() {
 
 function StringsCodeDemo3() {
 
-    alert("Error: \"\" string literal contains an unescaped line break");
+    alert("Error: Unexpected token ILLEGAL");
 
 }
 
 
 function StringsCodeDemo4() {
 
-    let guestList = "Guests:\n * John\n * Pete\n * Mary";
+    let guestList = "Guests:\n * Jim\n * Pea\n * Mia";
 
     alert(guestList); 
 
@@ -223,7 +223,7 @@ World` );
 
 function StringsCodeDemo6() {
 
-    alert("Error: 0 is read - only");
+    alert("Error: 0 is read only");
     
 
 }
@@ -231,39 +231,39 @@ function StringsCodeDemo6() {
 
 function StringsCodeDemo7() {
 
-    let str = 'Hi';
+    let txt = 'Hi';
 
-    str = 'h' + str[1];  
+    txt = 'h' + str[1];  
 
-    alert(str); 
+    alert(txt); 
 
 
 }
 
 function StringsCodeSolution1() {
 
-    function ucFirst(str) {
-        if (!str) return str;
+    function ucFirst(txt) {
+        if (!txt) return txt;
 
-        return str[0].toUpperCase() + str.slice(1);
+        return txt[0].toUpperCase() + txt.slice(1);
     }
 
-    alert(ucFirst("john")); 
+    alert(ucFirst("jim")); 
 
 }
 
 
 function StringsCodeSolution2() {
 
-    function checkSpam(str) {
-        let lowerStr = str.toLowerCase();
+    function checkSpam(txt) {
+        let lowerTxt = txt.toLowerCase();
 
-        return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+        return lowerTxt.includes('aaa') || lowerStr.includes('bbb');
     }
 
-    alert(checkSpam('buy ViAgRA now'));
-    alert(checkSpam('free xxxxx'));
-    alert(checkSpam("innocent rabbit"));
+    alert(checkSpam('buy aaa now'));
+    alert(checkSpam('free bbb'));
+    alert(checkSpam("innocent Jim"));
 
 }
 
