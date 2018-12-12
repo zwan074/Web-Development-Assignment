@@ -30,17 +30,18 @@
 
 
         <p>
-            A variable in JavaScript can contain any data. A variable can at one moment be a string and later receive a numeric value:
+            A variable in JavaScript can contain any data. 
+            A variable can at one moment be a string and later receive a numeric value:
 
         </p>
 
 
         <div class="code_box">
 
-            <span class=" let">let</span> message = <span style="color: #690 ">"hello"</span>;
+            <span class=" let">let</span> message = <span class="string">"hello"</span>;
             <br />
             <br />
-            message = <span style="color: #905 ">123456 </span> ;
+            message = <span class=" number">123456 </span> ;
 
 
         </div>
@@ -49,74 +50,77 @@
             Programming languages that allow such things are called “dynamically typed”,
             meaning that there are data types, but variables are not bound to any of them.
             There are seven basic data types in JavaScript. Here we’ll study the basics,
-            and in the next chapters we’ll talk about each of them in detail.
         </p>
+
         <h3> A number</h3>
 
         <div class="code_box">
-            let n = <span style="color: #905 ">123</span>; <br /><br />
-            n = <span style="color: #905 ">12.345</span>;
+            let n = <span class=" number">123</span>; <br /><br />
+            n = <span class=" number">12.345</span>;
         </div>
 
 
         <p>
             The number type serves both for integer and floating point numbers. <br /><br />
 
-            There are many operations for numbers, e.g. multiplication <span style="background-color: #f5f2f0">
+            There are many operations for numbers, e.g. multiplication <span class=" highlight">
                 *
-            </span>, division <span style="background-color: #f5f2f0">
+            </span>, division <span class=" highlight">
                 /
-            </span>, addition <span style="background-color: #f5f2f0">
+            </span>, addition <span class=" highlight">
                 +
-            </span>, subtraction <span style="background-color: #f5f2f0">
+            </span>, subtraction <span class=" highlight">
                 -
             </span> and so on.<br /><br />
 
-            Besides regular numbers, there are so-called “special numeric values” which also belong to that type: <span style="background-color: #f5f2f0">
+            Besides regular numbers, there are so-called “special numeric values” which also belong to that type: <span class=" highlight">
                 Infinity
-            </span>, <span style="background-color: #f5f2f0">
+            </span>, <span class=" highlight">
                 -Infinity
-            </span> and <span style="background-color: #f5f2f0">
+            </span> and <span class=" highlight">
                 NaN
             </span>.<br /><br />
 
-            <span style="background-color: #f5f2f0">Infinity</span> represents the mathematical Infinity ∞.<br /><br />
+            <span class=" highlight">Infinity</span> represents the mathematical Infinity ∞.<br /><br />
             It is a special value that’s greater than any number. We can get it as a result of division by zero: <br /><br />
         </p>
+
         <div class="code_box">
-            alert( <span style="color: #905 ">1</span> /<span style="color: #905 "> 0</span> ); <span class=" = comment">// Infinity </span><br /><br />
+            alert( <span class=" number">1</span> /<span class=" number"> 0</span> ); 
+            <span class=" = comment">// Infinity </span><br /><br />
             <button type="button" onclick="DataTypesCodeDemo_1_and_2()">Run Code</button>
 
         </div>
+
         <p>
             Or just mention it in the code directly:<br /><br />
         </p>
 
         <div class="code_box">
-            alert( <span style="color: #905 ">Infinity</span> ); <span class=" = comment">// Infinity</span> <br /><br />
+            alert( <span class=" number">Infinity</span> ); <span class=" = comment">// Infinity</span> <br /><br />
             <button type="button" onclick="DataTypesCodeDemo_1_and_2()">Run Code</button>
         </div>
 
         <p>
 
-            <span style="background-color: #f5f2f0">NaN</span> represents a computational error. It is a result of an incorrect or
+            <span class=" highlight">NaN</span> represents a computational error. It is a result of an incorrect or
             an undefined mathematical operation, for instance: <br /><br />
 
         </p>
         <div class="code_box">
 
-            alert( <span style="color: #690 ">"not a number"</span> / <span style="color: #905 ">2</span>  );
+            alert( <span class=" string">"not a number"</span> / <span class=" number">2</span>  );
             <span class=" = comment">// NaN, such division is erroneous</span> <br /><br />
             <button type="button" onclick="DataTypesCodeDemo_3_and_4()">Run Code</button>
 
         </div>
         <p>
-            <span style="background-color: #f5f2f0">NaN</span> is sticky. Any further operation on NaN would give NaN: <br /><br />
+            <span class=" highlight">NaN</span> is sticky. Any further operation on NaN would give NaN: <br /><br />
         </p>
 
 
         <div class="code_box">
-            alert( <span style="color: #690 ">"not a number"</span> / <span style="color: #905 ">2</span> + <span style="color: #905 ">5</span> );
+            alert(<span class=" string">"not a number"</span> / <span class=" number">2</span> + <span class=" number">5</span> );
             <span class=" = comment">// NaN </span><br /><br />
             <button type="button" onclick="DataTypesCodeDemo_3_and_4()">Run Code</button>
         </div>
@@ -131,22 +135,22 @@
         </p>
 
         <div class="code_box">
-            <span class=" let">let</span> str =  <span style="color: #690 ">"Hello"</span>;<br /><br />
-            <span class=" let">let</span> str2 =  <span style="color: #690 ">'Single quotes are ok too'</span>;<br /><br />
-            <span class=" let">let</span> phrase =  <span style="color: #690 ">`can embed ${str}`</span>;<br /><br />
+            <span class=" let">let</span> str =  <span class="string">"Hello"</span>;<br /><br />
+            <span class=" let">let</span> str2 =  <span class="string">'Single quotes are ok too'</span>;<br /><br />
+            <span class=" let">let</span> phrase =  <span class="string">`can embed ${str}`</span>;<br /><br />
         </div>
 
         <p>In JavaScript, there are 3 types of quotes.</p>
 
         <ol>
             <li>
-                Double quotes: <span style="background-color: #f5f2f0">"Hello"</span> .<br /><br />
+                Double quotes: <span class=" highlight">"Hello"</span> .<br /><br />
             </li>
             <li>
-                Single quotes: <span style="background-color: #f5f2f0">'Hello'</span> .<br /><br />
+                Single quotes: <span class=" highlight">'Hello'</span> .<br /><br />
             </li>
             <li>
-                Backticks: <span style="background-color: #f5f2f0">`Hello`</span> .<br /><br />
+                Backticks: <span class=" highlight">`Hello`</span> .<br /><br />
 
             </li>
         </ol>
@@ -155,32 +159,33 @@
             Double and single quotes are “simple” quotes. There’s no difference between them in JavaScript.<br /><br />
 
             Backticks are “extended functionality” quotes. They allow us to embed variables and expressions
-            into a string by wrapping them in <span style="background-color: #f5f2f0">${…}</span> , for example:<br /><br />
+            into a string by wrapping them in <span class=" highlight">${…}</span> , for example:<br /><br />
         </p>
 
         <div class="code_box">
-            <span class=" let">let</span> name =  <span style="color: #690 ">"John"</span>;<br /><br />
+            <span class=" let">let</span> name =  <span class="string">"John"</span>;<br /><br />
 
             <span class=" = comment">// embed a variable<br /><br /></span>
-            alert(  <span style="color: #690 ">`Hello, ${name}!`</span> ); <span class=" = comment">// Hello, John!</span><br /><br />
+            alert(  <span class="string">`Hello, ${name}!`</span> ); <span class=" = comment">// Hello, John!</span><br /><br />
 
             <span class=" = comment">// embed an expression<br /><br /></span>
-            alert(  <span style="color: #690 ">`the result is ${1 + 2}`</span> ); <span class=" = comment">// the result is 3</span><br /><br />
+            alert(  <span class="string">`the result is ${1 + 2}`</span> ); <span class=" = comment">// the result is 3</span><br /><br />
             <button type="button" onclick="DataTypesCodeDemo5()">Run Code</button>
 
         </div>
 
         <p>
-            The expression inside <span style="background-color: #f5f2f0">${…}</span>  is evaluated and the result becomes a part of the string.
+            The expression inside <span class=" highlight">${…}</span>  
+            is evaluated and the result becomes a part of the string.
             We can put anything there: a variable like name or an arithmetical expression like
-            <span style="background-color: #f5f2f0">1 + 2</span>  or something more complex.<br /><br />
+            <span class=" highlight">1 + 2</span>  or something more complex.<br /><br />
 
             Please note that this can only be done in backticks. Other quotes do not allow such embedding!<br /><br />
 
         </p>
 
         <div class="code_box">
-            alert(  <span style="color: #690 ">"the result is ${1 + 2}"</span> ); <br /><br />
+            alert(  <span class="string">"the result is ${1 + 2}"</span> ); <br /><br />
             <span class=" = comment">// the result is ${1 + 2} (double quotes do nothing)</span><br /><br />
             <button type="button" onclick="DataTypesCodeDemo6()">Run Code</button>
         </div>
@@ -189,23 +194,25 @@
         <h3> A boolean (logical type)</h3>
 
         <p>
-            The boolean type has only two values: <span style="background-color: #f5f2f0">true</span>  and <span style="background-color: #f5f2f0">false</span> .<br /><br />
+            The boolean type has only two values: <span class=" highlight">true</span> and <span class=" highlight">false</span> .<br /><br />
 
-            This type is commonly used to store yes/no values: <span style="background-color: #f5f2f0">true</span>  means “yes, correct”,
-            and <span style="background-color: #f5f2f0">false</span>  means “no, incorrect”.<br /><br />
+            This type is commonly used to store yes/no values: <span class=" highlight">true</span>  means “yes, correct”,
+            and <span class=" highlight">false</span>  means “no, incorrect”.<br /><br />
 
             For instance:<br /><br />
         </p>
 
         <div class="code_box">
-            <span class=" let">let</span> nameFieldChecked = <span style="color: #905 ">true</span>; <span class=" = comment">// yes, name field is checked</span><br />
-            <span class=" let">let</span> ageFieldChecked = <span style="color: #905 ">false</span>; <span class=" = comment">// no, age field is not checked</span><br />
+            <span class=" let">let</span> nameFieldChecked = <span class=" number">true</span>; 
+            <span class=" = comment">// yes, name field is checked</span><br />
+            <span class=" let">let</span> ageFieldChecked = <span class=" number">false</span>; 
+            <span class=" = comment">// no, age field is not checked</span><br />
         </div>
 
         <p>Boolean values also come as a result of comparisons:<br /><br /></p>
 
         <div class="code_box">
-            <span class=" let">let</span> isGreater = <span style="color: #905 ">4</span> > <span style="color: #905 ">1</span>;<br /><br />
+            <span class=" let">let</span> isGreater = <span class="number">4</span> > <span class="number">1</span>;<br /><br />
 
             alert( isGreater ); <span class=" = comment">// true (the comparison result is "yes")</span><br /><br />
             <button type="button" onclick="DataTypesCodeDemo7()">Run Code</button>
@@ -215,14 +222,14 @@
 
         <ul>
             <li>
-                <span style="background-color: #f5f2f0">number</span>  for numbers of any kind: integer or floating-point.
+                <span class=" highlight">number</span>  for numbers of any kind: integer or floating-point.
             </li>
             <li>
-                <span style="background-color: #f5f2f0">string</span>  for strings. A string may have one or more characters, there’s no separate single-character type.
+                <span class=" highlight">string</span>  for strings. A string may have one or more characters, there’s no separate single-character type.
             </li>
             <li>
-                <span style="background-color: #f5f2f0">boolean</span>
-                for <span style="background-color: #f5f2f0">true</span> /<span style="background-color: #f5f2f0">false</span> .
+                <span class=" highlight">boolean</span>
+                for <span class=" highlight">true</span> /<span class=" highlight">false</span> .
             </li>
 
         </ul>
@@ -238,13 +245,13 @@
 
         <div class=" code_box">
 
-            <span class=" let">let</span> name = <span style="color: #690 ">"Ilya"</span>; <br /><br />
+            <span class=" let">let</span> name = <span class="string">"Ilya"</span>; <br /><br />
 
-            alert( <span style="color: #690 ">`hello ${1}`</span> ); <span class=" comment">// ?</span><br /><br />
+            alert( <span class="string">`hello ${1}`</span> ); <span class=" comment">// ?</span><br /><br />
 
-            alert( <span style="color: #690 ">`hello ${"name"}`</span> ); <span class="comment">// ?</span><br /><br />
+            alert( <span class="string">`hello ${"name"}`</span> ); <span class="comment">// ?</span><br /><br />
 
-            alert( <span style="color: #690 ">`hello ${name}`</span> ); <span class=" comment">// ?</span><br /><br />
+            alert( <span class="string">`hello ${name}`</span> ); <span class=" comment">// ?</span><br /><br />
 
         </div>
 
@@ -262,16 +269,16 @@
             </p>
 
             <div class=" code_box">
-                <span class=" let">let</span> name = <span style="color: #690 ">"Ilya"</span>;<br /><br />
+                <span class=" let">let</span> name = <span class="string">"Ilya"</span>;<br /><br />
 
                 <span class=" comment">// the expression is a number 1</span><br /><br />
-                alert( <span style="color: #690 ">`hello ${1}`</span> ); <span class=" comment">// hello 1</span><br /><br />
+                alert( <span class="string">`hello ${1}`</span> ); <span class=" comment">// hello 1</span><br /><br />
 
                 <span class=" comment">// the expression is a string "name"</span><br /><br />
-                alert( <span style="color: #690 ">`hello ${"name"}`</span> ); <span class="comment">// hello name</span><br /><br />
+                alert( <span class="string">`hello ${"name"}`</span> ); <span class="comment">// hello name</span><br /><br />
 
                 <span class=" comment">// the expression is a variable, embed it</span><br /><br />
-                alert( <span style="color: #690 ">`hello ${name}`</span> ); <span class=" comment">// hello Ilya</span><br /><br />
+                alert( <span class="string">`hello ${name}`</span> ); <span class=" comment">// hello Ilya</span><br /><br />
             </div>
         </div>
 

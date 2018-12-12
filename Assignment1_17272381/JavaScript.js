@@ -29,6 +29,7 @@ function createFeedBackForm() {
 }
 
 
+
 function SolutionAndAnswer(solutionNum, answerNum) {
     $(document).ready(function () {
         $(solutionNum).click(function () {
@@ -93,7 +94,7 @@ function ValidateName(uname) {
 
 
 function ValidateEmail(uemail) {
-    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;//two forward slashes contains a regular expression. 
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
     if (uemail.match(mailformat)) {
         return true;
     }

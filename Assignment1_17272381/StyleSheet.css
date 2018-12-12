@@ -42,6 +42,18 @@
     color: #708090;
 }
 
+.string {
+    color: #690
+}
+
+.number {
+    color: #905;
+}
+
+.highlight {
+    background-color:   aquamarine;
+}
+
 
 .solution1, .answer1, .solution2, .answer2 {
 

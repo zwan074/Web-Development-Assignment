@@ -42,21 +42,19 @@
         <h3>The if Statement</h3>
 
         <p>
-            Use the <span style="background-color: #f5f2f0">if</span> statement
+            Use the <span class=" highlight">if</span> statement
             to specify a block of JavaScript code to be executed if a condition is true.<br /><br />
 
             For example:<br />
         </p>
 
-
-
         <div class=" code_box">
 
             <span class=" let">let</span> year =
-            prompt(<span style="color: #690 ">'In which year was ECMAScript-2015 specification published?'</span>,
-            <span style="color: #690 ">''</span>);<br /><br />
+            prompt(<span class="string">'In which year was ECMAScript-2015 specification published?'</span>,
+            <span class="string">''</span>);<br /><br />
 
-            <span class=" let">if</span> (year == <span style="color: #905 "> 2015</span>) alert( <span style="color: #690 ">'You are right!' </span>);<br /><br />
+            <span class=" let">if</span> (year == <span class="number"> 2015</span>) alert( <span class="string">'You are right!' </span>);<br /><br />
 
             <button type="button" onclick="ConditionsCodeDemo1 ()">Run Code</button>
         </div>
@@ -64,20 +62,20 @@
         <h3>The else Statement</h3>
 
         <p>
-            Use the <span style="background-color: #f5f2f0">else</span> statement to specify a block of code to be executed if the condition is false.<br /><br />
+            Use the <span class=" highlight">else</span> statement to specify a block of code to be executed if the condition is false.<br /><br />
 
             For example:<br />
         </p>
         <div class=" code_box">
 
             <span class=" let">let</span> year = prompt(
-            <span style="color: #690 ">'In which year was ECMAScript-2015 specification published?'</span>,
-            <span style="color: #690 ">''</span>);<br /><br />
+            <span class="string">'In which year was ECMAScript-2015 specification published?'</span>,
+            <span class="string">''</span>);<br /><br />
 
-            <span class=" let">if</span> (year == <span style="color: #905 ">2015</span>) {<br />
-            alert( <span style="color: #690 ">'You guessed it right!'</span> );<br />
+            <span class=" let">if</span> (year == <span class="number">2015</span>) {<br />
+            alert( <span class="string">'You guessed it right!'</span> );<br />
             } <span class=" let">else</span> {<br />
-            alert( <span style="color: #690 ">'How can you be so wrong?'</span> );
+            alert( <span class="string">'How can you be so wrong?'</span> );
             <span class="comment">// any value except 2015</span><br />
             }<br /><br />
             <button type="button" onclick="ConditionsCodeDemo2 ()">Run Code</button>
@@ -86,7 +84,7 @@
         <h3>The else if Statement</h3>
 
         <p>
-            Use the <span style="background-color: #f5f2f0">else if</span>
+            Use the <span class=" highlight">else if</span>
             statement to specify a new condition if the first condition is false.<br /><br />
 
             For example:<br />
@@ -94,15 +92,15 @@
         <div class=" code_box">
 
             <span class=" let">let</span> year = prompt(
-            <span style="color: #690 ">'In which year was ECMAScript-2015 specification published?'</span>,
-            <span style="color: #690 ">''</span>);<br /><br />
+            <span class="string">'In which year was ECMAScript-2015 specification published?'</span>,
+            <span class="string">''</span>);<br /><br />
 
-            <span class=" let">if</span> (year <span style="color: #905 ">2015</span>) {<br />
-            alert( <span style="color: #690 ">'Too early...'</span> );<br />
-            } <span class=" let">else if</span> (year > <span style="color: #905 ">2015</span>) {<br />
-            alert( <span style="color: #690 ">'Too late'</span> );<br />
+            <span class=" let">if</span> (year <span class="number">2015</span>) {<br />
+            alert( <span class="string">'Too early...'</span> );<br />
+            } <span class=" let">else if</span> (year > <span class="number">2015</span>) {<br />
+            alert( <span class="string">'Too late'</span> );<br />
             } <span class=" let">else</span> {<br />
-            alert( <span style="color: #690 ">'Exactly!'</span> );<br />
+            alert( <span class="string">'Exactly!'</span> );<br />
             }<br /><br />
             <button type="button" onclick="ConditionsCodeDemo3 ()">Run Code</button>
         </div>
@@ -117,11 +115,11 @@
             1.if (a string with zero)
         </h4>
         <p>
-            Will <span style="background-color: #f5f2f0">alert</span> be shown?
+            Will <span class=" highlight">alert</span> be shown?
         </p>
         <div class=" code_box">
-            <span class=" let">if</span> (<span style="color: #690 ">"0"</span>) {
-            alert( <span style="color: #690 ">'Hello'</span> );
+            <span class=" let">if</span> (<span class="string">"0"</span>) {
+            alert(<span class="string">'Hello'</span> );
             }
         </div>
 
@@ -136,15 +134,15 @@
             <p>
                 Yes, it will.
 
-                Any string except an empty one (and <span style="background-color: #f5f2f0">"0"</span> is not empty) becomes
+                Any string except an empty one (and <span class="string">"0"</span> is not empty) becomes
 
-                <span style="background-color: #f5f2f0">true</span> in the logical context.<br /><br />
+                <span class=" highlight">true</span> in the logical context.<br /><br />
 
                 We can run and check:
             </p>
             <div class=" code_box">
-                <span class=" let">if</span> (<span style="color: #690 ">"0"</span>) { <br /><br />
-                alert( <span style="color: #690 ">'Hello'</span> );<br /><br />
+                <span class=" let">if</span> (<span class="string">"0"</span>) { <br /><br />
+                alert(<span class="string">'Hello'</span> );<br /><br />
                 }<br /><br />
 
                 <button type="button" onclick="ConditionsCodeSolution1()">Run Code</button>
@@ -157,13 +155,13 @@
             2.Show the sign
         </h4>
         <p>
-            Using <span style="background-color: #f5f2f0">if..else</span>,
-            write the code which gets a number via <span style="background-color: #f5f2f0">prompt</span> and
-            then shows in <span style="background-color: #f5f2f0">alert</span>:<br /><br />
+            Using <span class=" highlight">if..else</span>,
+            write the code which gets a number via <span class=" highlight">prompt</span> and
+            then shows in <span class=" highlight">alert</span>:<br /><br />
 
-            <span style="background-color: #f5f2f0">1</span>, if the value is greater than zero,<br />
-            <span style="background-color: #f5f2f0">-1</span>, if less than zero,<br />
-            <span style="background-color: #f5f2f0">0</span>, if equals zero.<br />
+            <span class=" highlight">1</span>, if the value is greater than zero,<br />
+            <span class=" highlight">-1</span>, if less than zero,<br />
+            <span class=" highlight">0</span>, if equals zero.<br />
 
             In this task we assume that the input is always a number.
         </p>
@@ -179,14 +177,14 @@
         <div class="answer2">
 
             <div class=" code_box">
-                <span class=" let">let</span> value = prompt(<span style="color: #690 ">'Type a number'</span>, <span style="color: #905 ">0</span> ); <br /><br />
+                <span class=" let">let</span> value = prompt(<span class="string">'Type a number'</span>, <span style="color: #905 ">0</span> ); <br /><br />
 
-                <span class=" let">if</span> (value > <span style="color: #905 ">0</span> ) {<br />
+                <span class=" let">if</span> (value > <span class="number">0</span> ) {<br />
                 alert( 1 );<br />
-                } <span class=" let">else if</span> (value <span style="color: #905 ">0</span> ) {<br />
+                } <span class=" let">else if</span> (value <span class="number">0</span> ) {<br />
                 alert( -1 );<br />
                 } <span class=" let">else</span> {<br />
-                alert( <span style="color: #905 ">0</span> );<br />
+                alert( <span class="number">0</span> );<br />
                 }<br />
 
                 <button type="button" onclick="ConditionsCodeSolution2()">Run Code</button>

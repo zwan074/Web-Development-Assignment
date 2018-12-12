@@ -27,13 +27,11 @@
 
         <h3> A variable </h3>
         <p>
-            A variable is a “named storage” for data. We can use variables to store goodies,
-            visitors and other data. <br />
+            A variable is a “named storage” for data. We can use variables to store objects.<br />
             <br />
             To create a variable in JavaScript, we need to use the <span class=" let">let</span> keyword. <br>
 
-            The statement below creates (in other words:
-            declares or defines) a variable with the name “message”:<br />
+            The statement below creates a variable with the name “message”:<br />
 
         </p>
 
@@ -41,7 +39,7 @@
             <span class=" let">let</span> message;
         </div>
         <p>
-            Now we can put some data into it by using the assignment operator  <span style="background-color: #f5f2f0">=</span>:
+            Now we can put some data into it by using the assignment operator  <span class=" highlight">=</span>:
         </p>
 
         <div class="code_box">
@@ -49,7 +47,7 @@
             <span class=" let">let</span> message;
             <br />
             <br />
-            message = <span style="color: #690 ">'Hello'</span>; <span class="comment">// store the string</span>
+            message = <span class=" string">'Hello'</span>; <span class="comment">// store the string</span>
 
 
         </div>
@@ -62,7 +60,7 @@
             <p>
                 <span class=" let">let</span> message;
                 <br />
-                message = <span style="color: #690 ">'Hello'</span>;
+                message = <span class=" string">'Hello'</span>;
                 <br />
                 <br />
                 alert(message); <span class="comment">// shows the variable content</span>
@@ -81,7 +79,7 @@
 
         <div class="code_box">
             <p>
-                <span class=" let">let</span> message = <span style="color: #690 ">'Hello'</span>;
+                <span class=" let">let</span> message = <span class=" string">'Hello'</span>;
                 <span class="comment">// define the variable and assign the value</span>
                 <br />
                 <br />
@@ -99,7 +97,7 @@
         <p>To declare a constant (unchanging) variable, one can use const instead of let:</p>
         <div class="code_box">
             <p>
-                <span class=" let">const</span>  myBirthday = <span style="color: #690 ">'18.04.1982'</span>;
+                <span class=" let">const</span>  myBirthday = <span class=" string">'18.04.1982'</span>;
             </p>
 
         </div>
@@ -110,10 +108,10 @@
 
         <div class="code_box">
             <p>
-                <span class=" let">const</span> myBirthday = <span style="color: #690 ">'18.04.1982'</span>;
+                <span class=" let">const</span> myBirthday = <span class=" string">'18.04.1982'</span>;
                 <br />
                 <br />
-                myBirthday = <span style="color: #690 ">'18.04.2000'</span>;
+                myBirthday = <span class=" string">'18.04.2000'</span>;
                 <span class="comment">// error, can't reassign the constant!</span>
             </p>
 
@@ -130,48 +128,40 @@
         <p>
             Talking about variables, there’s one more extremely important thing.<br /><br />
 
-            Please name the variables sensibly. Take time to think if needed.<br /><br />
+            Take time to think if needed and name the variables sensibly.<br /><br />
 
             Variable naming is one of the most important and complex skills in programming.
-            A quick glance at variable names can reveal which code is written by a beginner and which by an experienced developer.<br /><br />
+            A quick glance at variable names can reveal which code is written by
+            a beginner and which by an experienced developer.<br /><br />
 
-            In a real project, most of the time is spent on modifying and extending the existing code base,
-            rather than writing something completely separate from scratch. And when we return to the code after some time of
-            doing something else, it’s much easier to find information that is well-labeled. Or, in other words,
-            when the variables have good names.<br /><br />
+            In a real project, most of the time is spent on filing , modifying and extending the existing code base,
+            it’s much easier to help programmers understanding the code with right name of variables. <br /><br />
+            Spending time thinking about right name of variables will help recieve greate return in long term<br /><br />
 
-            Please spend some time thinking about the right name for a variable before declaring it. This will repay you a lot.<br /><br />
 
             Some good-to-follow rules are:<br />
         </p>
         <ul>
             <li>
-                Use human-readable names like <span style="background-color: #f5f2f0">userName</span> or
-                <span style="background-color: #f5f2f0">shoppingCart</span>.
+                Use human-readable names like <span class=" highlight">userName</span> or
+                <span class=" highlight">passWord</span>.
             </li>
             <li>
-                Stay away from abbreviations or short names like <span style="background-color: #f5f2f0">a</span>,
-                <span style="background-color: #f5f2f0">b</span>, <span style="background-color: #f5f2f0">c</span>, unless you really know what you’re doing.
+                Stay away from abbreviations or short names like <span class=" highlight">a</span>,
+                <span class=" highlight">b</span>, <span class=" highlight">c</span>.
             </li>
             <li>
-                Make the name maximally descriptive and concise. Examples of bad names are <span style="background-color: #f5f2f0">
-                    data
-                </span> and <span style="background-color: #f5f2f0">value</span>. Such a name says nothing.
+                Make the name maximally descriptive and concise. Examples of bad names are <span class=" highlight">
+                data</span> and <span class=" highlight">value</span>. Such a name says nothing.
                 It is only ok to use them if it’s exceptionally obvious from the context which data or value is meant.
             </li>
             <li>
-                Agree on terms within your team and in your own mind.
-                If a site visitor is called a “user” then we should name related variables like <span style="background-color: #f5f2f0">
-                    currentUser
-                </span>  or <span style="background-color: #f5f2f0">newUser</span> ,
-                but not <span style="background-color: #f5f2f0">currentVisitor</span> or a <span style="background-color: #f5f2f0"> newManInTown</span> .
+                Agree on terms within your team.
+                If a site visitor is called a “user” then we should name related variables like <span class=" highlight">
+                    currentUser</span>  or <span class=" highlight">newUser</span> ,
+                but not <span class=" highlight">currentVisitor</span> or a <span class=" highlight"> newManInTown</span> .
             </li>
         </ul>
-
-        <p>
-            Sounds simple? Indeed it is, but creating good descriptive-and-concise names in practice is not. Go for it.
-        </p>
-
 
 
         <h3>Summary</h3>
@@ -181,7 +171,7 @@
                 <span class=" let">let</span> – is a modern variable declaration. The code must be in strict mode to use let in Chrome (V8).
             </li>
             <li>
-                <span class=" let">const</span> – is like let, but the value of the variable can’t be changed.
+                <span class=" let">const</span> – is like let, however the value of the variable can’t be changed.
             </li>
 
         </ul>
@@ -199,13 +189,13 @@
                 Declare two variables: admin and name.
             </li>
             <li>
-                Assign the value "John" to name.
+                Assign the value "Amy" to name.
             </li>
             <li>
                 Copy the value from name to admin.
             </li>
             <li>
-                Show the value of admin using alert (must output “John”).
+                Show the value of admin using alert (must output “Amy”).
             </li>
         </ol>
 
@@ -221,7 +211,7 @@
 
             <span class=let>let</span> admin,name;
             <span class=comment> // can declare two variables at once</span><br><br>
-            name = <span style="color: #690 ">"John"</span>;<br><br>
+            name = <span class=" string">"Amy"</span>;<br><br>
             admin = name;<br><br>
             alert( admin ); <span class=comment>//"John"</span>
 
@@ -250,14 +240,14 @@
             That’s simple:<br /><br />
 
 
-            <span class=let>let</span> ourPlanetName = <span style="color: #690 ">"Earth"</span>;<br /><br />
+            <span class=let>let</span> ourPlanetName = <span class=" string">"Earth"</span>;<br /><br />
             Note, we could use a shorter name planet, but it might be not obvious
 
             what planet it refers to. It’s nice to be more verbose. At least until the variable isNotTooLong.<br /><br />
 
             Second, the name of the current visitor:<br /><br />
 
-            <span class=let>let</span> currentUserName = <span style="color: #690 ">John"</span>; <br /><br />
+            <span class=let>let</span> currentUserName = <span class=" string">"John"</span>; <br /><br />
 
             Again, we could shorten that to <span class="comment">userName</span> if we know for sure that the user is current.<br /><br />
 
