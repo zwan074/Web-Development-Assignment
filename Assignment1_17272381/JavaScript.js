@@ -270,51 +270,51 @@ function StringsCodeSolution2() {
 //--demo code and tasks solution in Conditions Section
 function ConditionsCodeDemo1() {
 
-    let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+    let year = prompt('In which year was google founded', '');
 
-    if (year == 2015) alert('You are right!');
+    if (year == 1998) alert('Correct!' );
 }
 
 function ConditionsCodeDemo2() {
 
-    let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+    let year = prompt('In which year was google founded', '');
 
-    if (year == 2015) {
-        alert('You guessed it right!');
+    if (year == 1998) {
+        alert('Corrct!');
     } else {
-        alert('How can you be so wrong?'); 
+        alert('Please do some research?'); 
     }
 }
 
 function ConditionsCodeDemo3() {
 
-    let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+    let year = prompt('In which year was google founded', '');
 
-    if (year < 2015) {
-        alert('Too early...');
-    } else if (year > 2015) {
-        alert('Too late');
+    if (year < 1998) {
+        alert('A little bit early...');
+    } else if (year > 1998) {
+        alert('A little bit late');
     } else {
-        alert('Exactly!');
+        alert('Correct!');
     }
 }
 
 function ConditionsCodeSolution1() {
 
-    if ("0") { alert('Hello'); } 
+    if ("0") { alert('Hi'); } 
 
 }
 
 function ConditionsCodeSolution2() {
 
-    let value = prompt('Type a number', 0);
+    let value = prompt('Type a number', '');
 
     if (value > 0) {
-        alert(1);
+        alert(true);
     } else if (value < 0) {
-        alert(-1);
+        alert(false);
     } else {
-        alert(0);
+        alert('is 0');
     }
 
 }
