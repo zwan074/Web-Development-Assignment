@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Javascript Tutorial</h1>
+        <h1><img src="../img/Js Title.PNG" alt="Special Character image" width="600" height="40" /></h1>
         <hr>
         <a href="Strings.html" class="navButton">< PREVIOUS</a>
         <a href="Loops.html" class="navButton">NEXT ></a>
@@ -24,172 +24,190 @@
 
     <section>
         <h2>Javascript Conditions</h2>
-        <h3>Condtion Statement</h3>
-        <p>
+        <div class=" contentDiv1">
+            <h3>Condtion Statement</h3>
+            <p>
+                Very often when you write code, you want to perform different actions for different decisions.
 
-            You can use conditional statements in your code to perform different actions for different decisions..
+                You can use conditional statements in your code to do this.
 
-            In JavaScript we have the following conditional statements:
-        </p>
-        <ul>
-            <li>Use if to decide a block of code to be executed, if a specified condition is true</li>
-            <li>Use else to decide a block of code to be executed, if the same condition is false</li>
-            <li>Use else if to decide a new condition to test, if the first condition is false</li>
-            <li>Use switch to decide many alternative blocks of code to be executed</li>
-        </ul>
+                In JavaScript we have the following conditional statements:
+            </p>
+            <ul>
+                <li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+                <li>Use else to specify a block of code to be executed, if the same condition is false</li>
+                <li>Use else if to specify a new condition to test, if the first condition is false</li>
+                <li>Use switch to specify many alternative blocks of code to be executed</li>
+            </ul>
 
+        </div>
         <h3>The if Statement</h3>
+        <div class=" contentDiv2">
 
-        <p>
-            Use the <span class=" highlight">if</span> statement
-            to specify a block of JavaScript code to be executed if a condition is true.<br /><br />
 
-            For example:<br />
-        </p>
+            <p>
+                Use the <span class=" highlight">if</span> statement
+                to specify a block of JavaScript code to be executed if a condition is true.<br /><br />
 
-        <div class=" code_box">
+                For example:<br />
+            </p>
 
-            <span class=" let">let</span> year =
-            prompt(<span class="string">'In which year was google founded'</span>,
-            <span class="string">''</span>);<br /><br />
+            <div class=" code_box">
 
-            <span class=" let">if</span> (year == <span class="number"> 1998</span>) alert( <span class="string">'Correct!' </span>);<br /><br />
+                <span class=" let">let</span> year =
+                prompt(<span class="string">'In which year was ECMAScript-2015 specification published?'</span>,
+                <span class="string">''</span>);<br /><br />
 
-            <button type="button" onclick="ConditionsCodeDemo1 ()">Run Code</button>
+                <span class=" let">if</span> (year == <span class="number"> 2015</span>) alert( <span class="string">'You are right!' </span>);<br /><br />
+
+                <button type="button" onclick="ConditionsCodeDemo1 ()">Run Code</button>
+            </div>
+            <br />
         </div>
 
         <h3>The else Statement</h3>
+        <div class=" contentDiv1">
+            <p>
+                Use the <span class=" highlight">else</span> statement to specify a block of code to be executed if the condition is false.<br /><br />
 
-        <p>
-            Use the <span class=" highlight">else</span> statement to specify a block of code to be executed if the condition is false.<br /><br />
+                For example:<br />
+            </p>
+            <div class=" code_box">
 
-            For example:<br />
-        </p>
-        <div class=" code_box">
+                <span class=" let">let</span> year = prompt(
+                <span class="string">'In which year was ECMAScript-2015 specification published?'</span>,
+                <span class="string">''</span>);<br /><br />
 
-            <span class=" let">let</span> year = prompt(
-            <span class="string">'In which year was google founded'</span>,
-            <span class="string">''</span>);<br /><br />
-
-            <span class=" let">if</span> (year == <span class="number">1998</span>) {<br />
-            alert( <span class="string">'Corrct!'</span> );<br />
-            } <span class=" let">else</span> {<br />
-            alert( <span class="string">'Please do some research?'</span> );
-            <span class="comment">// any value except 1998</span><br />
-            }<br /><br />
-            <button type="button" onclick="ConditionsCodeDemo2 ()">Run Code</button>
+                <span class=" let">if</span> (year == <span class="number">2015</span>) {<br />
+                alert( <span class="string">'You guessed it right!'</span> );<br />
+                } <span class=" let">else</span> {<br />
+                alert( <span class="string">'How can you be so wrong?'</span> );
+                <span class="comment">// any value except 2015</span><br />
+                }<br /><br />
+                <button type="button" onclick="ConditionsCodeDemo2 ()">Run Code</button>
+            </div>
+            <br />
         </div>
+       
 
         <h3>The else if Statement</h3>
+        <div class=" contentDiv2">
 
-        <p>
-            Use the <span class=" highlight">else if</span>
-            statement to specify a new condition if the first condition is false.<br /><br />
+            <p>
+                Use the <span class=" highlight">else if</span>
+                statement to specify a new condition if the first condition is false.<br /><br />
 
-            For example:<br />
-        </p>
-        <div class=" code_box">
+                For example:<br />
+            </p>
+            <div class=" code_box">
 
-            <span class=" let">let</span> year = prompt(
-            <span class="string">'In which year was google founded'</span>,
-            <span class="string">''</span>);<br /><br />
+                <span class=" let">let</span> year = prompt(
+                <span class="string">'In which year was ECMAScript-2015 specification published?'</span>,
+                <span class="string">''</span>);<br /><br />
 
-            <span class=" let">if</span> (year <span class="number">1998</span>) {<br />
-            alert( <span class="string">'A little bit early...'</span> );<br />
-            } <span class=" let">else if</span> (year > <span class="number">1998</span>) {<br />
-            alert( <span class="string">'A little late'</span> );<br />
-            } <span class=" let">else</span> {<br />
-            alert( <span class="string">'Correct!'</span> );<br />
-            }<br /><br />
-            <button type="button" onclick="ConditionsCodeDemo3 ()">Run Code</button>
+                <span class=" let">if</span> (year <span class="number">2015</span>) {<br />
+                alert( <span class="string">'Too early...'</span> );<br />
+                } <span class=" let">else if</span> (year > <span class="number">2015</span>) {<br />
+                alert( <span class="string">'Too late'</span> );<br />
+                } <span class=" let">else</span> {<br />
+                alert( <span class="string">'Exactly!'</span> );<br />
+                }<br /><br />
+                <button type="button" onclick="ConditionsCodeDemo3 ()">Run Code</button>
+            </div>
+            <br />
         </div>
-
-        <hr />
 
         <h3>
             Tasks
         </h3>
 
-        <h4>
-            1.if (a string has 1)
-        </h4>
-        <p>
-            Will <span class=" highlight">alert</span> be shown?
-        </p>
-        <div class=" code_box">
-            <span class=" let">if</span> (<span class="string">"1"</span>) {
-            alert(<span class="string">'Hi'</span> );
-            }
-        </div>
-
-        <script>
-            SolutionAndAnswer(".solution1", ".answer1")
-        </script>
-
-
-        <button class="solution1"> Solution </button>
-
-        <div class="answer1">
+        <div class=" contentDiv1">
+            <h4>
+                1.if (a string with zero)
+            </h4>
             <p>
-                Yes, it will.
-
-                Any string except an empty one (and <span class="string">"1"</span> is not empty) will be read as
-
-                <span class=" highlight">true</span> in the boolean context.<br /><br />
-
-                We can run and check:
+                Will <span class=" highlight">alert</span> be shown?
             </p>
             <div class=" code_box">
-                <span class=" let">if</span> (<span class="string">"1"</span>) { <br /><br />
-                alert(<span class="string">'Hi'</span> );<br /><br />
-                }<br /><br />
+                <span class=" let">if</span> (<span class="string">"0"</span>) {
+                alert(<span class="string">'Hello'</span> );
+                }
+            </div>
 
-                <button type="button" onclick="ConditionsCodeSolution1()">Run Code</button>
+            <script>
+                SolutionAndAnswer(".solution1", ".answer1")
+            </script>
+
+
+            <button class="solution1"> Solution </button>
+
+            <div class="answer1">
+                <p>
+                    Yes, it will.
+
+                    Any string except an empty one (and <span class="string">"0"</span> is not empty) becomes
+
+                    <span class=" highlight">true</span> in the logical context.<br /><br />
+
+                    We can run and check:
+                </p>
+                <div class=" code_box">
+                    <span class=" let">if</span> (<span class="string">"0"</span>) { <br /><br />
+                    alert(<span class="string">'Hello'</span> );<br /><br />
+                    }<br /><br />
+
+                    <button type="button" onclick="ConditionsCodeSolution1()">Run Code</button>
+                </div>
+
             </div>
 
         </div>
+        
+
+        <div class=" contentDiv2">
+            <h4>
+                2.Show the sign
+            </h4>
+            <p>
+                Using <span class=" highlight">if..else</span>,
+                write the code which gets a number via <span class=" highlight">prompt</span> and
+                then shows in <span class=" highlight">alert</span>:<br /><br />
+
+                <span class=" highlight">1</span>, if the value is greater than zero,<br />
+                <span class=" highlight">-1</span>, if less than zero,<br />
+                <span class=" highlight">0</span>, if equals zero.<br />
+
+                In this task we assume that the input is always a number.
+            </p>
 
 
-        <h4>
-            2.Show the sign
-        </h4>
-        <p>
-            Using <span class=" highlight">if..else</span>,
-            write the code which gets a number via <span class=" highlight">prompt</span> and
-            then shows in <span class=" highlight">alert</span>:<br /><br />
-
-            <span class=" highlight">true</span>, if the value is greater than zero,<br />
-            <span class=" highlight">false</span>, if less than zero,<br />
-            <span class=" highlight">is 0</span>, if equals zero.<br />
-
-            In this task we assume that the input is always a number.
-        </p>
+            <script>
+                SolutionAndAnswer(".solution2", ".answer2")
+            </script>
 
 
-        <script>
-            SolutionAndAnswer(".solution2", ".answer2")
-        </script>
+            <button class="solution2"> Solution </button>
 
+            <div class="answer2">
 
-        <button class="solution2"> Solution </button>
+                <div class=" code_box">
+                    <span class=" let">let</span> value = prompt(<span class="string">'Type a number'</span>, <span style="color: #905 ">0</span> ); <br /><br />
 
-        <div class="answer2">
+                    <span class=" let">if</span> (value > <span class="number">0</span> ) {<br />
+                    alert( 1 );<br />
+                    } <span class=" let">else if</span> (value <span class="number">0</span> ) {<br />
+                    alert( -1 );<br />
+                    } <span class=" let">else</span> {<br />
+                    alert( <span class="number">0</span> );<br />
+                    }<br />
 
-            <div class=" code_box">
-                <span class=" let">let</span> value = prompt(<span class="string">'Type a number'</span>, <span class = "string">''</span> ); <br /><br />
+                    <button type="button" onclick="ConditionsCodeSolution2()">Run Code</button>
+                </div>
 
-                <span class=" let">if</span> (value > <span class="number">0</span> ) {<br />
-                alert(  <span class="number">true </span>);<br />
-                } <span class=" let">else if</span> (value <span class="number">0</span> ) {<br />
-                alert( <span class="number"> false</span> );<br />
-                } <span class=" let">else</span> {<br />
-                alert( <span class="string">'is 0'</span> );<br />
-                }<br />
-
-                <button type="button" onclick="ConditionsCodeSolution2()">Run Code</button>
             </div>
 
         </div>
+        
 
         <script>createFeedBackForm()</script>
 

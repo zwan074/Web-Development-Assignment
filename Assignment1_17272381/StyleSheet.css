@@ -1,4 +1,13 @@
-﻿
+﻿.contentDiv1{
+
+    background-color:  beige;
+
+
+}
+
+.contentDiv2 {
+    background-color:  antiquewhite ;
+}
 
 
 .navButton {
@@ -25,10 +34,11 @@
 }
 
 .code_box {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     font: 18px/20px Consolas,Lucida Console,Menlo,Monaco,monospace;
-    margin: 0;
     padding: 1em;
-    margin: 1.5em 0;
+    margin: 1.5em;
+    border: 2px solid #568dca;
     overflow: auto;
     background: #f5f2f0;
 }

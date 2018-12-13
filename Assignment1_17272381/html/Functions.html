@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Javascript Tutorial</h1>
+        <h1><img src="../img/Js Title.PNG" alt="Special Character image" width="600" height="40" /></h1>
         <hr>
         <a href="Conditions.html" class="navButton">< PREVIOUS</a>
         <a href="../Main.html" class="navButton">HOME</a>
@@ -24,7 +24,181 @@
     </script>
 
     <section>
+        <h2>Javascript Functions</h2>
 
+        <div class=" contentDiv1">
+            <p>
+
+                A JavaScript function is a block of code designed to perform a particular task.
+
+                and be executed when calls it.
+
+            </p>
+
+            <div class=" code_box">
+
+                <span class=" let">function</span> myFunction(x, y) { <br />
+                <span class=" let">return</span> x + y;    <span class=" comment">//returns the sum of x and y</span> <br />
+                }<br />
+            </div>
+            <br />
+
+        </div>
+        
+        <h3>Function Syntax</h3>
+        <div class=" contentDiv2">
+            <p>
+
+                A JavaScript function is defined with the function keyword, followed by a <span class="highlight">name and ()</span>.<br /><br />
+
+                Function names has same rules as variables can contain letters, digits, underscores, and $ signs.
+            </p>
+
+            <div class=" code_box">
+                a function can contain multiple parameters separated by commas:<br />
+                (<span class=" number">parameter1</span>, <span class=" number">parameter2</span>, ...)<br /><br />
+
+                The code to be executed is placed inside curly brackets: <span class="highlight">{}</span> by the function<br />
+
+</div>
+
+            <p>
+                Function parameters are listed inside the <span class="highlight">()</span> in the function definition.<br /><br />
+
+                Function arguments are the values received by the function when it is invoked.<br /><br />
+
+                Inside the function, the arguments or the parameters is behaved as local variables.<br /><br />
+
+            </p>
+            <br />
+        </div>
+        
+
+        <h3>Function Calls</h3>
+        <div class=" contentDiv1">
+            <p>
+                The code inside the function will execute when a few means invoke (calls) the function:<br /><br />
+                <ul>
+                    <li>When an event occurs or a user clicks a button</li>
+                    <li>When it is invoked from JavaScript code</li>
+                    <li>Self invoked</li>
+                </ul>
+
+            </p>
+            <br />
+        </div>
+        
+
+        <h3>Function Return</h3>
+        <div class=" contentDiv2">
+            <p>
+                When JavaScript reaches a return statement, the function will stop executing. <br /><br />
+
+                If the function was invoked from a statement, JavaScript will <span class="highlight">"return"</span> 
+                to execute the code after the invoking statement.<br /><br />
+
+                Functions often compute a return value. The return value is "returned" back to the "caller":<br /><br />
+
+                For example:
+            </p>
+
+            <div class=" code_box">
+                <span class=" let">let</span> a = myFunction(<span class=" number">2</span>, <span class=" number">3</span>);
+                <span class=" comment">// Function is called, return value will end up in a , which is 5</span><br /><br />
+
+                <span class=" let">function</span> myFunction(x, y) {<br />
+                <span class=" let">return</span> x + y;            
+                <span class=" comment">// Function returns the sum of x and y</span><br />
+                }<br />
+                <br />
+                <button type="button" onclick="FunctionsDemo1()">Run Code</button>
+            </div>
+            <br />
+
+        </div>
+      
+
+        <h3>
+            Tasks
+        </h3>
+
+        <div class=" contentDiv1">
+            <h4>1. Function min(x, y)</h4>
+
+            <p>
+                Write a function <span class="highlight">min(x,y)</span> which returns smaller number two numbers <span class="highlight">x</span> 
+                and <span class="highlight">y</span>.
+
+                For example:
+            </p>
+
+            <div class=" code_box">
+
+                min(<span class=" number">2</span>, <span class=" number">6</span>) == <span class=" number">2</span> <br />
+                min(<span class=" number">4</span>, <span class=" number">-2</span>) == <span class=" number">-1</span><br />
+                min(<span class=" number">1</span>, <span class=" number">1</span>) == <span class=" number">1</span><br />
+
+            </div>
+
+            <script>
+                SolutionAndAnswer(".solution1", ".answer1")
+            </script>
+
+            <button class="solution1"> Solution </button>
+
+            <div class="answer1">
+               <span class=" let"> function</span> min(x, y) {<br />
+               <span class=" let">if</span> (x < y) {<br />
+               <span class=" let">return</span> x;<br />
+                } else {<br />
+               <span class=" let">return</span> y;<br />
+                }<br />
+                }
+            </div>
+        </div>
+      
+        <div class=" contentDiv2">
+            <h4>2. Nth Fibonacci number</h4>
+
+            <p>
+                Write a function <span class="highlight">fib(n)</span> which returns <span class="highlight">nth</span> Fibonacci number.<br /><br />
+
+                For example:
+            </p>
+
+            <div class=" code_box">
+
+                fib (<span class=" number">4</span>) == <span class=" number">2</span>;
+            </div>
+
+            <script>
+                SolutionAndAnswer(".solution2", ".answer2")
+            </script>
+
+            <button class="solution2"> Solution </button>
+
+            <div class="answer2">
+                <span class=" let">function</span> fib(n){<br />
+                <span class=" let">if</span> (n = <span class=" number">0</span>){<br />
+                <span class=" let">return</span> <span class=" number">0</span>;<br />
+                }<br /><br />
+
+                <span class=" let">if</span> (n = <span class=" number">1</span>) {<br />
+                <span class=" let">return</span> <span class=" number">1</span>;<br />
+                }<br /><br />
+
+                <span class=" let">else</span>{<br />
+                <span class=" let">return</span> fib(n-<span class=" number">1</span>) + fib(n-<span class=" number">2</span>);<br />
+                }<br /><br />
+
+                }
+
+
+
+            </div>
+
+        </div>
+       
 
         <script>createFeedBackForm()</script>
 

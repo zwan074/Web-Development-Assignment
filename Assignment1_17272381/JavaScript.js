@@ -1,18 +1,37 @@
 ﻿"use strict"
 
+//script to generate side navigation content
+function createSideNav(page) {
+    if (page == "main") {
+        document.write("<nav><ul>" +
+            "<li><a target=_top href= Main.html >Home</a></li>" +
+            "<li><a target=_top href= html/Variables.html >Variables</a></li>" +
+            "<li><a target=_top href=html/DataTypes.html>Data Types</a></li>" +
+            "<li><a target=_top href=html/Strings.html>Strings</a></li>" +
+            "<li><a target=_top href=html/Conditions.html>Conditions</a></li>" +
+            "<li><a target=_top href=html/Loops.html>Loops</a></li>" +
+            "<li><a target=_top href=html/Functions.html>Functions</a></li></ul></nav>");
 
-function createSideNav() {
-    document.write("<nav><ul>" +
-        "<li><a target=_top href= Main.html >Home</a></li>" +
-        "<li><a target=_top href= Variables.html >Variables</a></li>" +
-        "<li><a target=_top href=DataTypes.html>Data Types</a></li>" +
-        "<li><a target=_top href=Strings.html>Strings</a></li>" +
-        "<li><a target=_top href=Conditions.html>Conditions</a></li>" +
-        "<li><a target=_top href=Loops.html>Loops</a></li>" +
-        "<li><a target=_top href=Functions.html>Functions</a></li></ul></nav>");
+
+
+    }
+    else {
+
+        document.write("<nav><ul>" +
+            "<li><a target=_top href= ../Main.html >Home</a></li>" +
+            "<li><a target=_top href= Variables.html >Variables</a></li>" +
+            "<li><a target=_top href=DataTypes.html>Data Types</a></li>" +
+            "<li><a target=_top href=Strings.html>Strings</a></li>" +
+            "<li><a target=_top href=Conditions.html>Conditions</a></li>" +
+            "<li><a target=_top href=Loops.html>Loops</a></li>" +
+            "<li><a target=_top href=Functions.html>Functions</a></li></ul></nav>");
+    }
+
+    
 
 }
 
+//script to generate feedback form at bottom to interact with visitors.
 function createFeedBackForm() {
     document.write(
         "<hr /><form>" +
@@ -23,24 +42,12 @@ function createFeedBackForm() {
         "<input type=text id=emailadd required=required placeholder=\"e.g. abc@gmail.co.nz\" /></p>" +
 
         "<p><textarea id=message rows=10 cols=30>Please leave your feedback here</textarea></p>" +
-        
-        "<button type=button value=Submit onclick=formValidation()>Submit</button></form><br />");
-    
-}
 
-
-
-function SolutionAndAnswer(solutionNum, answerNum) {
-    $(document).ready(function () {
-        $(solutionNum).click(function () {
-            $(answerNum).slideToggle("quick");
-        });
-    });
+        "<input type=submit value=Submit onclick=formValidation() /></form><br />");
 
 }
 
-
-
+//script to validate username , email, and feedback message input
 function formValidation() {
 
     let uname = document.getElementById("username").value;
@@ -59,9 +66,10 @@ function formValidation() {
     return false;
 }
 
+// validate input in message box
 function ValidateMessage(umessage) {
     let message = "Please leave your feedback here";
-    if (umessage.match(message) | umessage == "") {
+    if (umessage.match(message)) {
         alert('Please enter your message');
         uname.focus();
         return false;
@@ -71,17 +79,17 @@ function ValidateMessage(umessage) {
     }
 }
 
-
+//validate input in name box
 function ValidateName(uname) {
-    let letters = /^[A-Za-z]+$/;
+    let letters = /^[A-Za-z]+$/;//name format regex
     if (uname.match(letters)) {
         return true;
     }
-    else if (uname == "") {
+    else if (uname.match("")) {
 
         alert('Please enter username');
         uname.focus();
-        return false;
+
     }
 
     else {
@@ -92,18 +100,18 @@ function ValidateName(uname) {
 }
 
 
-
+//validate input in email box
 function ValidateEmail(uemail) {
-    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;//exmail format regex. 
     if (uemail.match(mailformat)) {
         return true;
     }
 
-    else if (uemail=="") {
+    else if (uemail.match("")) {
 
         alert('Please enter your email address');
         uname.focus();
-        return false;
+
     }
 
     else {
@@ -111,12 +119,21 @@ function ValidateEmail(uemail) {
         uemail.focus();
         return false;
     }
-} 
+}
 
+//Display and hide content by clicking solution by using jQuerry. 
+function SolutionAndAnswer(solutionNum, answerNum) {
+    $(document).ready(function () {
+        $(solutionNum).click(function () {
+            $(answerNum).slideToggle("quick");
+        });
+    });
 
+}
 
+//--demo code and tasks solution in Varibles Section
 
-function VariblesCodeDemo1 () {
+function VariblesCodeDemo1() {
 
     let message;
     message = 'Hello';
@@ -127,9 +144,9 @@ function VariblesCodeDemo1 () {
 
 function VariblesCodeDemo2() {
 
-    let message = 'Hello!'; 
+    let message = 'Hello!';
 
-    alert(message); 
+    alert(message);
 
 }
 
@@ -139,7 +156,7 @@ function VariblesCodeDemo3() {
 
 }
 
-
+//--demo code and tasks solution in Data Types Section
 function DataTypesCodeDemo_1_and_2() {
 
     alert("Infinity");
@@ -152,13 +169,13 @@ function DataTypesCodeDemo_3_and_4() {
 
 }
 
-function DataTypesCodeDemo5 () {
+function DataTypesCodeDemo5() {
 
     let name = "John";
-    
-    alert(`Hello, ${name}!`); 
-    
-    alert(`the result is ${1 + 2}`); 
+
+    alert(`Hello, ${name}!`);
+
+    alert(`the result is ${1 + 2}`);
 
 }
 
@@ -170,11 +187,12 @@ function DataTypesCodeDemo6() {
 
 function DataTypesCodeDemo7() {
 
-    let isGreater = 4 > 1;
 
-    alert(isGreater); 
+    alert(isGreater);
 
 }
+
+//--demo code and tasks solution in Strings Section
 
 function StringsCodeDemo1() {
 
@@ -182,40 +200,40 @@ function StringsCodeDemo1() {
         return a + b;
     }
 
-    alert(`1 + 2 = ${sum(1, 2)}.`); 
+    alert(`1 + 2 = ${sum(1, 2)}.`);
 
 }
 
 function StringsCodeDemo2() {
 
     let guestList = `Guests:
-     * John
-     * Pete
-     * Mary
+     * Jim
+     * Pea
+     * Mia
     `;
 
-    alert(guestList); 
+    alert(guestList);
 
 }
 
 function StringsCodeDemo3() {
 
-    alert("Error: \"\" string literal contains an unescaped line break");
+    alert("Error: Unexpected token ILLEGAL");
 
 }
 
 
 function StringsCodeDemo4() {
 
-    let guestList = "Guests:\n * John\n * Pete\n * Mary";
+    let guestList = "Guests:\n * Jim\n * Pea\n * Mia";
 
-    alert(guestList); 
+    alert(guestList);
 
 }
 
 function StringsCodeDemo5() {
 
-    alert("Hello\nWorld"); 
+    alert("Hello\nWorld");
     alert(`Hello
 World` );
 
@@ -223,103 +241,103 @@ World` );
 
 function StringsCodeDemo6() {
 
-    alert("Error: 0 is read - only");
-    
+    alert("Error: 0 is read only");
+
 
 }
 
 
 function StringsCodeDemo7() {
 
-    let str = 'Hi';
+    let txt = 'Hi';
 
-    str = 'h' + str[1];  
+    txt = 'h' + txt[1];
 
-    alert(str); 
+    alert(txt);
 
 
 }
 
 function StringsCodeSolution1() {
 
-    function ucFirst(str) {
-        if (!str) return str;
+    function ucFirst(txt) {
+        if (!txt) return txt;
 
-        return str[0].toUpperCase() + str.slice(1);
+        return txt[0].toUpperCase() + txt.slice(1);
     }
 
-    alert(ucFirst("john")); 
+    alert(ucFirst("jim"));
 
 }
 
 
 function StringsCodeSolution2() {
 
-    function checkSpam(str) {
-        let lowerStr = str.toLowerCase();
+    function checkSpam(txt) {
+        let lowerTxt = txt.toLowerCase();
 
-        return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+        return lowerTxt.includes('aaa') || lowerTxt.includes('bbb');
     }
 
-    alert(checkSpam('buy ViAgRA now'));
-    alert(checkSpam('free xxxxx'));
-    alert(checkSpam("innocent rabbit"));
+    alert(checkSpam('buy aaa now'));
+    alert(checkSpam('free bbb'));
+    alert(checkSpam("innocent Jim"));
 
 }
 
-
+//--demo code and tasks solution in Conditions Section
 function ConditionsCodeDemo1() {
 
-    let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+    let year = prompt('In which year was google founded', '');
 
-    if (year == 2015) alert('You are right!');
+    if (year == 1998) alert('Correct!');
 }
 
 function ConditionsCodeDemo2() {
 
-    let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+    let year = prompt('In which year was google founded', '');
 
-    if (year == 2015) {
-        alert('You guessed it right!');
+    if (year == 1998) {
+        alert('Corrct!');
     } else {
-        alert('How can you be so wrong?'); 
+        alert('Please do some research?');
     }
 }
 
 function ConditionsCodeDemo3() {
 
-    let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+    let year = prompt('In which year was google founded', '');
 
-    if (year < 2015) {
-        alert('Too early...');
-    } else if (year > 2015) {
-        alert('Too late');
+    if (year < 1998) {
+        alert('A little bit early...');
+    } else if (year > 1998) {
+        alert('A little bit late');
     } else {
-        alert('Exactly!');
+        alert('Correct!');
     }
 }
 
 function ConditionsCodeSolution1() {
 
-    if ("0") { alert('Hello'); } 
+    if ("0") { alert('Hi'); }
 
 }
 
 function ConditionsCodeSolution2() {
 
-    let value = prompt('Type a number', 0);
+    let value = prompt('Type a number', '');
 
     if (value > 0) {
-        alert(1);
+        alert(true);
     } else if (value < 0) {
-        alert(-1);
+        alert(false);
     } else {
-        alert(0);
+        alert('is 0');
     }
 
 }
 
-
+//--demo code and tasks solution in Loops Section
 function LoopsCodeDemo1() {
     let i;
     for (i = 0; i < 5; i++) {
@@ -331,11 +349,13 @@ function LoopsCodeDemo1() {
 
 function LoopsCodeDemo2() {
 
-    let person = { fname: "John", lname: "Doe", age: 25 };
+    let student = { firstName: "Jim", lastName: "Dee", age: 20 };
+
     let x;
-    for (x in person) {
-        alert(person[x]);
-    } 
+    for (x in student) {
+        alert(student[x]);
+    }
+
 
 
 }
@@ -378,5 +398,19 @@ function LoopsSolution2() {
             alert(i);
         }
     }
+    
+}
+
+
+//--demo code and tasks solution in Functions Section
+
+function FunctionsDemo1() {
+
+    let a = myFunction(2, 3); 
+    alert(a);
+    function myFunction(x, y) {
+        return x + y; 
+    }
+
     
 }

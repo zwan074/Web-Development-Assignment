@@ -12,7 +12,7 @@
 <body>
 
     <header>
-        <h1>Welcome to Javascript Tutorial</h1>
+        <h1><img src="../img/Js Title.PNG" alt="Special Character image" width="600" height="40" /></h1>
         <hr>
         <a href="DataTypes.html" class="navButton">< PREVIOUS</a>
         <a href="Conditions.html" class="navButton">NEXT ></a>
@@ -27,248 +27,275 @@
     <section>
 
         <h2>Javascript Strings</h2>
-        <p>
-            In JavaScript, the textual data is stored as strings.
-        </p>
-        
-        <h3>Quotes</h3>
+        <div class=" contentDiv1">
+            <p>
+                In JavaScript, the textual data is stored as strings.
+            </p>
 
-        <p>
-            Let’s recall the kinds of quotes from Data Type section.<br /><br />
+            <h3>Quotes</h3>
 
-            Strings can be enclosed within either single quotes, double quotes or backticks:<br /><br />
-        </p>
-        <div class=" code_box">
-            <span class=" let">let</span> single = <span class="string">'single-quoted'</span>;<br />
-            <span class=" let">let</span> double = <span class="string">"double-quoted"</span>;<br /><br />
-            <span class=" let">let</span> backticks = <span class="string">`backticks`</span>;<br /><br />
+            <p>
+                Let’s recall the kinds of quotes from Data Type section.<br /><br />
+
+                Strings can be enclosed within either single quotes, double quotes or backticks:<br /><br />
+            </p>
+            <div class=" code_box">
+                <span class=" let">let</span> single = <span class="string">'single-quoted'</span>;<br />
+                <span class=" let">let</span> double = <span class="string">"double-quoted"</span>;<br /><br />
+                <span class=" let">let</span> backticks = <span class="string">`backticks`</span>;<br /><br />
+            </div>
+            <p>
+                Single and double quotes are essentially the same.<br /><br />
+                Backticks can allow us to embed any expression into the string, including function calls:<br /><br />
+            </p>
+            <div class=" code_box">
+                <span class=" let">function</span> sum(a, b) {<br />
+                <span class=" let">return</span> a + b;<br />
+                }<br /><br />
+                alert(<span class="string">`1 + 2 = ${sum(1, 2)}.`</span>); <span class="comment">// 1 + 2 = 3.</span><br /><br />
+                <button type="button" onclick="StringsCodeDemo1 ()">Run Code</button>
+            </div>
+
+            <p>using backticks can allow a string to span multiple lines:</p>
+            <div class=" code_box">
+                <span class=" let">let</span> guestList = <span class="string">
+                    `Guests:<br />
+                    * Jim<br />
+                    * Pea<br />
+                    * Mia<br />
+                    `
+                </span>;<br /><br />
+
+                alert(guestList); <span class="comment">// a list of guests</span><br /><br />
+                <button type="button" onclick="StringsCodeDemo2 ()">Run Code</button>
+            </div>
+
+
+            <p>If we try to use single or double quotes in the same way, there will be an error:</p>
+            <div class=" code_box">
+                <span class=" let">let</span> guestList = <span class="string">"Guests</span>:
+                <span class="comment"> // Error: Unexpected token ILLEGAL</span><br />
+                <span class="string">* John"</span>;<br /><br />
+                <button type="button" onclick="StringsCodeDemo3 ()">Run Code</button>
+            </div>
+            <br />
         </div>
-        <p>
-            Single and double quotes are essentially the same.<br /><br />
-            Backticks can allow us to embed any expression into the string, including function calls:<br /><br />
-        </p>
-        <div class=" code_box">
-            <span class=" let">function</span> sum(a, b) {<br />
-            <span class=" let">return</span> a + b;<br />
-            }<br /><br />
-            alert(<span class="string">`1 + 2 = ${sum(1, 2)}.`</span>); <span class="comment">// 1 + 2 = 3.</span><br /><br />
-            <button type="button" onclick="StringsCodeDemo1 ()">Run Code</button>
-        </div>
 
-        <p>using backticks can allow a string to span multiple lines:</p>
-        <div class=" code_box">
-            <span class=" let">let</span> guestList = <span class="string">
-                `Guests:<br />
-                * Jim<br />
-                * Pea<br />
-                * Mia<br />
-                `
-            </span>;<br /><br />
-
-            alert(guestList); <span class="comment">// a list of guests</span><br /><br />
-            <button type="button" onclick="StringsCodeDemo2 ()">Run Code</button>
-        </div>
-
-
-        <p>If we try to use single or double quotes in the same way, there will be an error:</p>
-        <div class=" code_box">
-            <span class=" let">let</span> guestList = <span class="string">"Guests</span>: 
-            <span class="comment"> // Error: Unexpected token ILLEGAL</span><br />
-            <span class="string">* John"</span>;<br /><br />
-            <button type="button" onclick="StringsCodeDemo3 ()">Run Code</button>
-        </div>
+       
 
         <h3>Special characters</h3>
-        <p>
-            It is able to to create multiline strings with single quotes<br /><br />
-            by using a <span class=" highlight">\n</span>,
-            which denotes a line break:
-        </p>
-        <div class=" code_box">
-            <span class=" let">let</span> guestList = <span class="string">"Guests:\n * Jim\n * Pea\n * Mia"</span>;<br /><br />
+        <div class=" contentDiv2">
+            <p>
+                It is able to to create multiline strings with single quotes<br /><br />
+                by using a <span class=" highlight">\n</span>,
+                which denotes a line break:
+            </p>
+            <div class=" code_box">
+                <span class=" let">let</span> guestList = <span class="string">"Guests:\n * Jim\n * Pea\n * Mia"</span>;<br /><br />
 
-            alert(guestList); <span class=" comment">// a multiline list of guests</span><br /><br />
-            <button type="button" onclick="StringsCodeDemo4 ()">Run Code</button>
-        </div>
-        <p>
-            For example, below two lines have same function:
-        </p>
-        <div class=" code_box">
-            alert( <span class=" string">"Hello\nWorld"</span> ); <span class="comment">// two lines using a "newline symbol"</span><br /><br />
+                alert(guestList); <span class=" comment">// a multiline list of guests</span><br /><br />
+                <button type="button" onclick="StringsCodeDemo4 ()">Run Code</button>
+            </div>
+            <p>
+                For example, below two lines have same function:
+            </p>
+            <div class=" code_box">
+                alert( <span class=" string">"Hello\nWorld"</span> ); <span class="comment">// two lines using a "newline symbol"</span><br /><br />
 
-            <span class=" comment">// two lines using a normal newline and backticks</span><br />
-            alert( <span class=" string">
-                `Hello<br />
-                World`
-            </span> );<br /><br />
-            <button type="button" onclick="StringsCodeDemo5 ()">Run Code</button>
+                <span class=" comment">// two lines using a normal newline and backticks</span><br />
+                alert( <span class=" string">
+                    `Hello<br />
+                    World`
+                </span> );<br /><br />
+                <button type="button" onclick="StringsCodeDemo5 ()">Run Code</button>
+            </div>
+            <p>
+                Below is the list for less common “special” characters:
+            </p>
+
+            <p class=" code_box"><img src="../img/Character Table.PNG" alt="Special Character image" width="700" /></p>
+            <br />
+
         </div>
-        <p>
-            Below is the list for less common “special” characters:
-        </p>
-        <img src="img/Character Table.PNG" alt="Special Character image" width="700" />
-        
+      
+
         <h3>String length</h3>
-        <p>
-            The <span class=" highlight">length</span> property has the string length:
-        </p>
-        
-        <div class=" code_box">
-            alert( <span class=" string">`My\n`</span>.length ); <span class="comment">// length is 3</span>
+
+        <div class=" contentDiv1">
+            <p>
+                The <span class=" highlight">length</span> property has the string length:
+            </p>
+
+            <div class=" code_box">
+                alert( <span class=" string">`My\n`</span>.length ); <span class="comment">// length is 3</span>
+            </div>
+            <p>
+                Note that <span class=" highlight">\n</span> is a single “special” character,
+                so its length is indeed <span class=" highlight">3</span>.
+            </p>
         </div>
-        <p>
-            Note that <span class=" highlight">\n</span> is a single “special” character,
-            so its length is indeed <span class=" highlight">3</span>.
-        </p>
 
         <h3>Strings are immutable</h3>
-        <p>
-            Strings can’t be changed in JavaScript. When you see string changes is actually a new created String<br /><br />
 
-            Some examples are below:
-        </p>
-        <div class=" code_box">
-            <span class=" let">let</span> txt = <span class=" string">'Hi'</span>;<br /><br />
-            txt[<span class=" number">0</span>] = <span class=" string">'h'</span>; <span class="comment">// error</span><br />
-            alert( txt[<span class=" number">0</span>] ); <span class="comment">// not working</span><br /><br />
-            <button type="button" onclick="StringsCodeDemo6 ()">Run Code</button>
+        <div class=" contentDiv2">
+            <p>
+                Strings can’t be changed in JavaScript. When you see string changes is actually a new created String<br /><br />
+
+                Some examples are below:
+            </p>
+            <div class=" code_box">
+                <span class=" let">let</span> txt = <span class=" string">'Hi'</span>;<br /><br />
+                txt[<span class=" number">0</span>] = <span class=" string">'h'</span>; <span class="comment">// error</span><br />
+                alert( txt[<span class=" number">0</span>] ); <span class="comment">// not working</span><br /><br />
+                <button type="button" onclick="StringsCodeDemo6 ()">Run Code</button>
+            </div>
+            <p>
+
+                The usual workaround is to create a whole new string and assign it to str instead of the old one.<br /><br />
+
+                For instance:
+            </p>
+            <div class=" code_box">
+                <span class=" let">let</span> txt = <span class=" string">'Hi'</span>;<br /><br />
+
+                txt = <span class=" string">'h'</span> + txt[<span class=" number">1</span>];
+                <span class="comment">// replace the string</span><br /><br />
+
+                alert( txt ); <span class="comment">// hi</span><br /><br />
+                <button type="button" onclick="StringsCodeDemo7 ()">Run Code</button>
+            </div>
+
         </div>
-        <p>
-
-            The usual workaround is to create a whole new string and assign it to str instead of the old one.<br /><br />
-
-            For instance:
-        </p>
-        <div class=" code_box">
-            <span class=" let">let</span> txt = <span class=" string">'Hi'</span>;<br /><br />
-
-            txt = <span class=" string">'h'</span> + txt[<span class=" number">1</span>];  
-            <span class="comment">// replace the string</span><br /><br />
-
-            alert( txt ); <span class="comment">// hi</span><br /><br />
-            <button type="button" onclick="StringsCodeDemo7 ()">Run Code</button>
-        </div>
+        
 
         <h3>
             Summary
         </h3>
+        <div class=" contentDiv1">
+            <ul>
+                <li>
+                    There are 3 types of quotes. Backticks allow a string to span multiple lines and embed expressions.
+                </li>
+                <li>
+                    We can use special characters such as <span class=" highlight">\n</span>
+                    and insert letters by their unicode using <span class=" highlight">\u....</span>
+                </li>
 
-        <ul>
-            <li>
-                There are 3 types of quotes. Backticks allow a string to span multiple lines and embed expressions.
-            </li>
-            <li>
-                We can use special characters such as <span class=" highlight">\n</span>
-                and insert letters by their unicode using <span class=" highlight">\u....</span>
-            </li>
-
-        </ul>
-        <hr />
+            </ul>
+            <br />
+        </div>
+        
         <h3>
             Tasks
         </h3>
-
-        <h4>
-            1.Change the first character to Uppercast 
-        </h4>
-        <p>
-            Write a function <span class=" highlight">ucFirst(str)</span> that returns the string
-            <span class=" highlight">txt</span> with the uppercased first character, for instance:
-        </p>
-        <div class=" code_box">
-            ucFirst("jim") == <span class=" string">"Jim"</span>;
-        </div>
-
-        <script>
-            SolutionAndAnswer(".solution1", ".answer1")
-        </script>
-
-
-        <button class="solution1"> Solution </button>
-
-        <div class="answer1">
+        <div class=" contentDiv2">
+            <h4>
+                1.Change the first character to Uppercast
+            </h4>
             <p>
-                We can’t “replace” the first character, because strings in JavaScript are immutable. <br /><br />
-
-                Therefore, we need to declare a new string based on the existing one, with the uppercased first character:
+                Write a function <span class=" highlight">ucFirst(str)</span> that returns the string
+                <span class=" highlight">txt</span> with the uppercased first character, for instance:
             </p>
             <div class=" code_box">
-                <span class=" let">let</span> newStr = txt[<span class=" number">0</span>].toUpperCase()
-                + txt.slice(<span class=" number">1</span>);
+                ucFirst("jim") == <span class=" string">"Jim"</span>;
             </div>
-            <p>
-                There’s another problem though. If <span class=" highlight">txt</span> is empty,
-                then <span class=" highlight">txt[0]</span> is undefined so that get an error.<br /><br />
-            </p>
+
+            <script>
+                SolutionAndAnswer(".solution1", ".answer1")
+            </script>
+
+
+            <button class="solution1"> Solution </button>
+
+            <div class="answer1">
+                <p>
+                    We can’t “replace” the first character, because strings in JavaScript are immutable. <br /><br />
+
+                    Therefore, we need to declare a new string based on the existing one, with the uppercased first character:
+                </p>
+                <div class=" code_box">
+                    <span class=" let">let</span> newStr = txt[<span class=" number">0</span>].toUpperCase()
+                    + txt.slice(<span class=" number">1</span>);
+                </div>
+                <p>
+                    There’s another problem though. If <span class=" highlight">txt</span> is empty,
+                    then <span class=" highlight">txt[0]</span> is undefined so that get an error.<br /><br />
+                </p>
                 There are two variants can be used here:<br /><br />
-            <ol>
-                <li>Use <span class=" highlight">txt.charAt(0)</span>, as it always returns a string (maybe empty).</li>
-                <li>Add a test for an empty string.</li>
-            </ol>
-            <p>
-                Here’s the 2nd variant:
-            </p>
-            <div class=" code_box">
-                <span class=" let">function</span> ucFirst(txt) {<br />
-                if (!txt) <span class=" let">return</span> txt;<br /><br />
+                <ol>
+                    <li>Use <span class=" highlight">txt.charAt(0)</span>, as it always returns a string (maybe empty).</li>
+                    <li>Add a test for an empty string.</li>
+                </ol>
+                <p>
+                    Here’s the 2nd variant:
+                </p>
+                <div class=" code_box">
+                    <span class=" let">function</span> ucFirst(txt) {<br />
+                    if (!txt) <span class=" let">return</span> txt;<br /><br />
 
-                <span class=" let">return</span> txt[<span class=" number">0</span>].toUpperCase() + str.slice(<span class=" number">1</span>);<br />
-                }<br /><br />
+                    <span class=" let">return</span> txt[<span class=" number">0</span>].toUpperCase() + str.slice(<span class=" number">1</span>);<br />
+                    }<br /><br />
 
-                alert( ucFirst(<span class=" string">"jim"</span>) ); <span class="comment">// Jim</span><br /><br />
-                <button type="button" onclick="StringsCodeSolution1()">Run Code</button>
+                    alert( ucFirst(<span class=" string">"jim"</span>) ); <span class="comment">// Jim</span><br /><br />
+                    <button type="button" onclick="StringsCodeSolution1()">Run Code</button>
+                </div>
+
             </div>
 
         </div>
+        
 
-
-        <h4>
-            2.Check spams
-        </h4>
-        <p>
-            Write a function <span class=" highlight">checkSpam(txt)</span> that
-            returns <span class=" highlight">true </span>
-            if <span class=" highlight">txt</span> contains 'aaa' or 'bbb', otherwise `false`.<br /><br />
-
-            The function must be case-insensitive:
-        </p>
-        <div class=" code_box">
-            checkSpam(<span class=" string">'buy aaa now'</span>) == <span class=" number">true</span><br />
-            checkSpam(<span class=" string">'free bbb'</span>) == <span class=" number">true</span><br />
-            checkSpam(<span class=" string">"innocent Jim"</span>) == <span class=" number">false</span><br />
-
-        </div>
-
-        <script>
-            SolutionAndAnswer(".solution2", ".answer2")
-        </script>
-
-
-        <button class="solution2"> Solution </button>
-
-        <div class="answer2">
+        <div class=" contentDiv1">
+            <h4>
+                2.Check spams
+            </h4>
             <p>
+                Write a function <span class=" highlight">checkSpam(txt)</span> that
+                returns <span class=" highlight">true </span>
+                if <span class=" highlight">txt</span> contains 'aaa' or 'bbb', otherwise `false`.<br /><br />
 
-                To make the search case-insensitive, let’s bring the stirng to lower case and then search:
+                The function must be case-insensitive:
             </p>
             <div class=" code_box">
+                checkSpam(<span class=" string">'buy aaa now'</span>) == <span class=" number">true</span><br />
+                checkSpam(<span class=" string">'free bbb'</span>) == <span class=" number">true</span><br />
+                checkSpam(<span class=" string">"innocent Jim"</span>) == <span class=" number">false</span><br />
 
-                <span class=" let">function</span> checkSpam(txt) {<br />
-                <span class=" let">let</span> lowerTxt = txt.toLowerCase();<br /><br />
-
-                <span class=" let">return</span>  lowerTxt.includes(<span class=" string">'aaa'</span>) ||
-                lowerTxt.includes(<span class=" string">'bbb'</span>);<br />
-                }<br /><br />
-
-                alert( checkSpam(<span class=" string">'buy aaa now'</span>) );<br />
-                alert( checkSpam(<span class=" string">'free bbb'</span>) );<br />
-                alert( checkSpam(<span class=" string">"innocent Jim"</span>) );<br /><br />
-
-                <button type="button" onclick="StringsCodeSolution2()">Run Code</button>
             </div>
 
+            <script>
+                SolutionAndAnswer(".solution2", ".answer2")
+            </script>
+
+
+            <button class="solution2"> Solution </button>
+
+            <div class="answer2">
+                <p>
+
+                    To make the search case-insensitive, let’s bring the stirng to lower case and then search:
+                </p>
+                <div class=" code_box">
+
+                    <span class=" let">function</span> checkSpam(txt) {<br />
+                    <span class=" let">let</span> lowerTxt = txt.toLowerCase();<br /><br />
+
+                    <span class=" let">return</span>  lowerTxt.includes(<span class=" string">'aaa'</span>) ||
+                    lowerTxt.includes(<span class=" string">'bbb'</span>);<br />
+                    }<br /><br />
+
+                    alert( checkSpam(<span class=" string">'buy aaa now'</span>) );<br />
+                    alert( checkSpam(<span class=" string">'free bbb'</span>) );<br />
+                    alert( checkSpam(<span class=" string">"innocent Jim"</span>) );<br /><br />
+
+                    <button type="button" onclick="StringsCodeSolution2()">Run Code</button>
+                </div>
+
+
+            </div>
 
         </div>
+      
 
         <script>createFeedBackForm()</script>
 
