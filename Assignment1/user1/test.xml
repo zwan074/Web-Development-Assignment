@@ -1,0 +1,38 @@
+<data userID="user1">
+
+<friendlist>
+<IPaddress>
+http://localhost:8080/user2
+</IPaddress>
+<IPaddress>
+http://localhost:8080/user3
+</IPaddress>
+</friendlist>
+
+<status> 
+<timestamp> </timestamp> 
+<content>test 1</content>
+
+<likes>
+
+<IPaddress>
+local:8080/user2
+</IPaddress>
+
+</likes>
+</status> 
+
+<status> 
+<timestamp> </timestamp> 
+<content>test 1</content>
+
+<likes>
+
+<IPaddress isFriend="Y">
+local:8080/user2
+</IPaddress>
+
+</likes>
+</status>
+ 
+ <status><timestamp>bbb</timestamp><content>aaa</content><likes>a</likes></status></data>

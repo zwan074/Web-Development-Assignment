@@ -1,0 +1,10 @@
+<!DOCTYPE status [
+<!ELEMENT data (friendlist,status)>
+<!ELEMENT friendlist (IPaddress)>
+<!ELEMENT status (timestamp,content,likes)>
+<!ELEMENT likes (IPaddress)>
+<!ELEMENT timestamp (#PCDATA)>
+<!ELEMENT IPaddress (#PCDATA)>
+<!ELEMENT content (#PCDATA)>
+<!ATTLIST data userID CDATA #REQUIRED>
+]> 

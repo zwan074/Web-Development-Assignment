@@ -1,0 +1,14 @@
+<data userID="user3">
+
+<friendlist>
+<IPaddress>user1</IPaddress>
+<IPaddress>user6</IPaddress>
+</friendlist>
+
+<status><lastModified>Sun, 07 Apr 2019 07:50:47 GMT</lastModified><timestamp>Sun, 07 Apr 2019 06:18:37 GMT</timestamp><content>u111
+</content><likes><IPaddress>user1</IPaddress><IPaddress>user2</IPaddress></likes></status><status><lastModified>Sun, 07 Apr 2019 07:50:48 GMT</lastModified><timestamp>Sun, 07 Apr 2019 06:18:40 GMT</timestamp><content>u2222
+</content><likes><IPaddress>user1</IPaddress><IPaddress>user2</IPaddress></likes></status><status><lastModified>Sun, 07 Apr 2019 07:50:49 GMT</lastModified><timestamp>Sun, 07 Apr 2019 06:18:45 GMT</timestamp><content>u333
+</content><likes><IPaddress>user1</IPaddress><IPaddress>user2</IPaddress></likes></status><status><lastModified>Sun, 07 Apr 2019 07:51:33 GMT</lastModified><timestamp>Sun, 07 Apr 2019 07:47:10 GMT</timestamp><content>444444
+</content><likes><IPaddress>user1</IPaddress><IPaddress>user2</IPaddress></likes></status><status><lastModified>Sun, 07 Apr 2019 08:15:21 GMT</lastModified><timestamp>Sun, 07 Apr 2019 08:15:03 GMT</timestamp><content>555
+</content><likes><IPaddress>user1</IPaddress></likes></status><status><lastModified>Sun, 07 Apr 2019 08:15:22 GMT</lastModified><timestamp>Sun, 07 Apr 2019 08:15:05 GMT</timestamp><content>666
+</content><likes><IPaddress>user1</IPaddress></likes></status></data>
