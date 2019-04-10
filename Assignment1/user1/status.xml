@@ -1,13 +1,13 @@
-<data userID="user1">
-
+<data ipAddress="http://localhost:8080" userID="user1">
+<ifModifiedSince>Wed, 10 Apr 2019 08:14:07 GMT</ifModifiedSince>
 <friendlist>
-<IPaddress>user2</IPaddress>
-<IPaddress>user3</IPaddress>
+<IPaddress>http://localhost:8081</IPaddress>
+<IPaddress>http://localhost:8082</IPaddress>
 </friendlist>
 
-<status><lastModified>Sun, 07 Apr 2019 07:52:18 GMT</lastModified><timestamp>Sun, 07 Apr 2019 06:15:50 GMT</timestamp><content>1111
-</content><likes><IPaddress>user2</IPaddress><IPaddress>user3</IPaddress></likes></status><status><lastModified>Sun, 07 Apr 2019 07:52:19 GMT</lastModified><timestamp>Sun, 07 Apr 2019 06:16:03 GMT</timestamp><content>2222
-</content><likes><IPaddress>user2</IPaddress><IPaddress>user3</IPaddress></likes></status><status><lastModified>Sun, 07 Apr 2019 07:50:19 GMT</lastModified><timestamp>Sun, 07 Apr 2019 06:18:00 GMT</timestamp><content>333
-</content><likes><IPaddress>user2</IPaddress></likes></status><status><lastModified>Sun, 07 Apr 2019 07:50:21 GMT</lastModified><timestamp>Sun, 07 Apr 2019 06:42:30 GMT</timestamp><content>4444444
-</content><likes><IPaddress>user2</IPaddress></likes></status><status><lastModified>Sun, 07 Apr 2019 07:52:29 GMT</lastModified><timestamp>Sun, 07 Apr 2019 07:46:28 GMT</timestamp><content>5555555555
-</content><likes><IPaddress>user2</IPaddress><IPaddress>user3</IPaddress></likes></status></data>
+<status><lastModified>Wed, 10 Apr 2019 08:22:04 GMT</lastModified><timestamp>Wed, 10 Apr 2019 06:20:46 GMT</timestamp><content>1
+</content><likes><IPaddress>http://localhost:8081</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:22:05 GMT</lastModified><timestamp>Wed, 10 Apr 2019 06:20:47 GMT</timestamp><content>2
+</content><likes><IPaddress>http://localhost:8081</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:22:05 GMT</lastModified><timestamp>Wed, 10 Apr 2019 08:03:34 GMT</timestamp><content>333333
+</content><likes><IPaddress>http://localhost:8081</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:22:07 GMT</lastModified><timestamp>Wed, 10 Apr 2019 08:06:35 GMT</timestamp><content>4444
+</content><likes><IPaddress>http://localhost:8081</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:28:10 GMT</lastModified><timestamp>Wed, 10 Apr 2019 08:23:29 GMT</timestamp><content>55555
+</content><likes><IPaddress>http://localhost:8081</IPaddress></likes></status></data>
