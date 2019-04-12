@@ -1,5 +1,6 @@
 "use strict"
 
+
 function hasliked(likes,userIP,IPaddress) // Submit button clicked
   {
 
@@ -16,8 +17,10 @@ function submitForm(FormElement)
   var xhttp = new XMLHttpRequest();
   xhttp.open (FormElement.method, FormElement.action, true);
   xhttp.send (new FormData (FormElement));
+ 
   return false;
 }
+
 
 function fetch_data_from_server() {
 	
@@ -174,9 +177,8 @@ function display_friendStatus(userIP,friend) {
 	    	        	
 	    	        	else {
 	    	        		//txt += "<tr><td><form action=\"like\/" + friend +"\/" + i + "\" method=\"post\" enctype=\"multipart\/form-data\" onsubmit=\"return submitForm(this);\">"
-	    	        		txt += "<tr><td><form action=\"" + friend + "\/" + userIP + "\/like\/" + i +  "\" method=\"post\" enctype=\"multipart\/form-data\" onsubmit=\"return submitForm(this);\">"
-	    	    	        
-	    	        		txt += "<button type=\"submit\" onclick=\"this.disabled = true\" >LIKE<\/button><\/form></td></tr>";
+	    	        		txt += "<tr><td><form name=\"like\" action=\"" + friend + "\/" + userIP + "\/like\/" + i +  "\" method=\"post\" enctype=\"multipart\/form-data\" onsubmit=\"return submitForm(this);\">"; 
+	    	        		txt += "<button type=\"submit\" onclick=\"this.disabled = true;\" >LIKE<\/button><\/form></td></tr>";
 	    	    	        txt += "<tr><td>Number of friends LIKE: </td><td>" + IPaddress.length + "</td></tr>";
 	    	        	}
 	    	        	
@@ -187,8 +189,8 @@ function display_friendStatus(userIP,friend) {
 	    	        
 	    	        else {
 	    	       
-	    	        	txt += "<tr><td><form action=\"" + friend + "\/" + userIP + "\/like\/" + i +  "\" method=\"post\" enctype=\"multipart\/form-data\" onsubmit=\"return submitForm(this);\">"    	    	        
-	    	        	txt += "<button type=\"submit\" onclick=\"this.disabled = true\" >LIKE<\/button><\/form></td></tr>";
+	    	        	txt += "<tr><td><form name=\"like\" action=\"" + friend + "\/" + userIP + "\/like\/" + i +  "\" method=\"post\" enctype=\"multipart\/form-data\" onsubmit=\"return submitForm(this);\">"    	    	        	 
+	    	        	txt += "<button type=\"submit\" onclick=\"this.disabled = true;\" >LIKE<\/button><\/form></td></tr>";
 	    	        	//txt += "<tr><td>Number of friends LIKE: 0 </td></tr>";
 	    	        	txt += "<tr><td>Number of friends LIKE: </td><td>" + IPaddress.length + "</td></tr>";
 	    	        }
