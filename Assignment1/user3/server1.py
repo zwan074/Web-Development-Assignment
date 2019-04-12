@@ -8,8 +8,8 @@ import xml.etree.ElementTree as ET
 def add_status(filename,message):
 	if filename.split("/")[-1] == 'new-status':
 		statusContent = message.split("\n")[15] #get status message from txt box
-		timestamp =  datetime.utcnow()
-		lastmodified = datetime.utcnow() - timedelta(seconds=30)
+		timestamp =  datetime.now()
+		lastmodified = datetime.now() #+ timedelta(seconds=600)
 		timestamp = timestamp.strftime('%a, %d %b %Y %H:%M:%S GMT') 
 		lastmodified = lastmodified.strftime('%a, %d %b %Y %H:%M:%S GMT') 
 		print(statusContent,timestamp,lastmodified)
@@ -49,7 +49,7 @@ def update_status_like_xml(userID,StatusNumber):
 	parser.feed ("<IPaddress>" + userID + "</IPaddress>" )
 	IPaddressElement = parser.close()
 	
-	lastModifiedTime =  datetime.utcnow() - timedelta(seconds=30)  
+	lastModifiedTime =  datetime.now() #+ timedelta(seconds=600) 
 	lastModifiedTime = lastModifiedTime.strftime('%a, %d %b %Y %H:%M:%S GMT') 
 		
 	parser = ET.XMLParser()
@@ -61,7 +61,7 @@ def update_status_like_xml(userID,StatusNumber):
 	lastModified.text = lastModifiedElement.text 
 	
 	tree.write("status.xml")
-
+	return
 
 def cache_for_updatePage () :
 	tree = ET.parse("status.xml")
@@ -69,8 +69,8 @@ def cache_for_updatePage () :
 	lastModifiedElements = root.findall(".//lastModified")
 	last_modified = ""
 	if (len (lastModifiedElements) > 0 ):
-		last_modified = "Mon, 01 Jan 1900 00:00:00 GMT"
-		for e in root.iter("lastModified"):
+		last_modified = lastModifiedElements[0].text 
+		for e in lastModifiedElements:
 			if (e.text > last_modified):
 				last_modified = e.text
 		#last_modified = "Last-Modified: " + last_modified + "\r\n" # find last updated like / status
@@ -85,6 +85,18 @@ def update_ifModifiedSince () :
 	ifModifiedSince= root.find("ifModifiedSince")
 	ifModifiedSince.text = timestamp
 	tree.write("status.xml")
+
+def Access_Control_Allow_Origin(message):
+	origin = message.split()[-3]
+	tree = ET.parse("status.xml")
+	root = tree.getroot()
+	allowed_ip = ""
+	friendsIP = root.find("friendlist")
+	for ip in friendsIP:
+		if ( ip.text == origin  ):
+			allowed_ip = ip.text 
+	
+	return "Access-Control-Allow-Origin:" + allowed_ip + "\r\n"
 		
 def process(connectionSocket) :	
 	# Receives the request message from the client
@@ -93,27 +105,40 @@ def process(connectionSocket) :
 		try:
 			# Extract the path of the requested object from the message
 			#print(message)
+			
+			contentType = ""
+			cache = ""
+			AccessControlAllowOriginHeader = ""
+			outputdata = ""
+			
 			filename = message.split()[1]
 			print(filename)
+			
 			add_status(filename,message)
 			add_like(filename)
+
+					
 			f = open(filename[1:],"rb")	
-			outputdata = f.read()
-			contentType = ""
-			cache = "";
+			outputdata = f.read()	
 			
 			if filename.endswith("html"):
 				contentType = "text/html"
+				last_modified = cache_for_updatePage ()
+				cache = "Cache-Control: private, max-age = 60 \r\n" + "Last-Modified:" + last_modified + "\r\n" + "Expires: -1\r\n" 
+				
 			if filename.endswith(('png', 'jpg')):
 				contentType = "image/"+filename.split('.')[-1]
-			#if filename.endswith("xml"):
+			if filename.endswith("xml"):
+				AccessControlAllowOriginHeader = Access_Control_Allow_Origin(message)
 				#update_ifModifiedSince () 
-				#last_modified = cache_for_updatePage ()
-				#cache = "Last-Modified:" + last_modified + "\r\n" + "cache-control: public,max-age=60\r\n"
+				last_modified = cache_for_updatePage ()
+				cache = "Cache-Control: private, max-age = 60 \r\n" + "Last-Modified:" + last_modified + "\r\n" + "Expires: -1\r\n" 
 				
-			connectionSocket.send(("HTTP/1.1 200 OK Content-Type:"+ contentType + "\r\n" + cache + "Access-Control-Allow-Origin:*\r\n\r\n" ).encode())
+					
+			connectionSocket.send(("HTTP/1.1 200 OK Content-Type:"+ contentType + "\r\n" + cache + AccessControlAllowOriginHeader  + "\r\n" ).encode())
 			connectionSocket.send(outputdata)
 			connectionSocket.close()
+			
 		except IOError:
 			# Send HTTP response message for file not found
 			connectionSocket.send("HTTP/1.1 404 Not Found\r\n\r\n".encode())

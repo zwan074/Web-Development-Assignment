@@ -1,13 +1,15 @@
 <data ipAddress="http://localhost:8081" userID="user2">
-<ifModifiedSince>Wed, 10 Apr 2019 08:14:07 GMT</ifModifiedSince>
+
 <friendlist>
 <IPaddress>http://localhost:8080</IPaddress>
 <IPaddress>http://localhost:8082</IPaddress>
-</friendlist>
-
-<status><lastModified>Wed, 10 Apr 2019 08:22:10 GMT</lastModified><timestamp>Wed, 10 Apr 2019 06:20:49 GMT</timestamp><content>1
-</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:22:10 GMT</lastModified><timestamp>Wed, 10 Apr 2019 06:20:50 GMT</timestamp><content>2
-</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:22:11 GMT</lastModified><timestamp>Wed, 10 Apr 2019 07:45:13 GMT</timestamp><content>333333
-</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:22:12 GMT</lastModified><timestamp>Wed, 10 Apr 2019 07:45:40 GMT</timestamp><content>4444
-</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:22:12 GMT</lastModified><timestamp>Wed, 10 Apr 2019 08:17:06 GMT</timestamp><content>5555
-</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status></data>
+</friendlist><status><lastModified>Fri, 12 Apr 2019 09:23:53 GMT</lastModified><timestamp>Fri, 12 Apr 2019 04:02:08 GMT</timestamp><content>post your status
+</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Fri, 12 Apr 2019 09:24:34 GMT</lastModified><timestamp>Fri, 12 Apr 2019 04:02:09 GMT</timestamp><content>post your status
+</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Fri, 12 Apr 2019 09:24:58 GMT</lastModified><timestamp>Fri, 12 Apr 2019 04:02:09 GMT</timestamp><content>post your status
+</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Fri, 12 Apr 2019 21:06:35 GMT</lastModified><timestamp>Fri, 12 Apr 2019 20:59:31 GMT</timestamp><content>Content-Disposition: form-data; name="description"
+</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Fri, 12 Apr 2019 21:06:36 GMT</lastModified><timestamp>Fri, 12 Apr 2019 21:00:23 GMT</timestamp><content>Content-Disposition: form-data; name="description"
+</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8082</IPaddress></likes></status><status><lastModified>Fri, 12 Apr 2019 21:06:08 GMT</lastModified><timestamp>Fri, 12 Apr 2019 21:01:51 GMT</timestamp><content>post your status
+</content><likes><IPaddress>http://localhost:8080</IPaddress></likes></status><status><lastModified>Sat, 13 Apr 2019 09:30:15 GMT</lastModified><timestamp>Sat, 13 Apr 2019 09:30:15 GMT</timestamp><content>
+</content><likes /></status><status><lastModified>Sat, 13 Apr 2019 09:30:24 GMT</lastModified><timestamp>Sat, 13 Apr 2019 09:30:24 GMT</timestamp><content>
+</content><likes /></status><status><lastModified>Sat, 13 Apr 2019 09:32:53 GMT</lastModified><timestamp>Sat, 13 Apr 2019 09:32:53 GMT</timestamp><content>post your status
+</content><likes /></status></data>

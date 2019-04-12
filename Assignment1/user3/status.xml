@@ -1,12 +1,11 @@
 <data ipAddress="http://localhost:8082" userID="user3">
-<ifModifiedSince>Mon, 01 Jan 1900 00:00:00 GMT</ifModifiedSince>
+
 <friendlist>
 <IPaddress>http://localhost:8080</IPaddress>
 <IPaddress>http://localhost:8081</IPaddress>
-</friendlist>
-
-<status><lastModified>Wed, 10 Apr 2019 08:21:53 GMT</lastModified><timestamp>Wed, 10 Apr 2019 08:22:04 GMT</timestamp><content>11111
-</content><likes><IPaddress>http://localhost:8081</IPaddress><IPaddress>http://localhost:8080</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:21:54 GMT</lastModified><timestamp>Wed, 10 Apr 2019 08:22:06 GMT</timestamp><content>2222222
-</content><likes><IPaddress>http://localhost:8081</IPaddress><IPaddress>http://localhost:8080</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:21:54 GMT</lastModified><timestamp>Wed, 10 Apr 2019 08:22:07 GMT</timestamp><content>33333333
-</content><likes><IPaddress>http://localhost:8081</IPaddress><IPaddress>http://localhost:8080</IPaddress></likes></status><status><lastModified>Wed, 10 Apr 2019 08:37:55 GMT</lastModified><timestamp>Wed, 10 Apr 2019 08:30:38 GMT</timestamp><content>4444
-</content><likes><IPaddress>http://localhost:8081</IPaddress></likes></status></data>
+</friendlist><status><lastModified>Fri, 12 Apr 2019 09:49:10 GMT</lastModified><timestamp>Fri, 12 Apr 2019 04:02:13 GMT</timestamp><content>post your status
+</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8081</IPaddress></likes></status><status><lastModified>Fri, 12 Apr 2019 09:49:24 GMT</lastModified><timestamp>Fri, 12 Apr 2019 04:02:13 GMT</timestamp><content>post your status
+</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8081</IPaddress></likes></status><status><lastModified>Fri, 12 Apr 2019 09:51:24 GMT</lastModified><timestamp>Fri, 12 Apr 2019 04:02:14 GMT</timestamp><content>post your status
+</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8081</IPaddress></likes></status><status><lastModified>Sat, 13 Apr 2019 09:35:10 GMT</lastModified><timestamp>Sat, 13 Apr 2019 09:35:10 GMT</timestamp><content>333
+</content><likes /></status><status><lastModified>Sat, 13 Apr 2019 09:35:14 GMT</lastModified><timestamp>Sat, 13 Apr 2019 09:35:14 GMT</timestamp><content>post your status
+</content><likes /></status></data>
