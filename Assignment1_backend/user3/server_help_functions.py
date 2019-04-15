@@ -7,7 +7,8 @@ from io import BytesIO
 
 #user post status    
 def add_status(filename,message):
-    if filename.split("/")[-1] == 'new-status':
+    
+    if filename.split("/")[-1] == 'new-status' :
         statusContent = message.split("\r\n\r\n")[-1].split("------")[0]#get status message from txt box
         statusContent = statusContent.replace("\r\n","*br*")
         timestamp =  datetime.now()
@@ -32,8 +33,8 @@ def update_status_xml(timestamp, lastmodified, statusContent):
     tree.write("status.xml")
 
 #user like friend status
-def add_like(filename):
-    if len(filename.split("/")) > 3:
+def add_like(filename):    
+    if len(filename.split("/")) > 3 :
         if filename.split("/")[-2] == "like":
             userID = "http://" + filename.split("/")[-3]
             StatusNumber = filename.split("/")[-1]
@@ -44,27 +45,25 @@ def update_status_like_xml(userID,StatusNumber):
     tree = ET.parse("status.xml") 
     root = tree.getroot()
     status = root.findall(".//status")
-    likes = status[int(StatusNumber)].find("likes")
-    lastModified = status[int(StatusNumber)].find("lastModified")
-    
-    parser = ET.XMLParser()
-    parser.feed ("<IPaddress>" + userID + "</IPaddress>" )
-    IPaddressElement = parser.close()
-    
-    lastModifiedTime =  datetime.now() #+ timedelta(seconds=600) 
-    lastModifiedTime = lastModifiedTime.strftime('%a, %d %b %Y %H:%M:%S GMT') 
+    ip_in_likes = status[int(StatusNumber)].find("likes")
+    if not hasliked(ip_in_likes,userID):
+        lastModified = status[int(StatusNumber)].find("lastModified")
         
-    parser = ET.XMLParser()
-    parser.feed ("<lastModified>" + lastModifiedTime + "</lastModified>")
-    lastModifiedElement = parser.close()
-    
-    
-    likes.append(IPaddressElement)
-    lastModified.text = lastModifiedElement.text 
-    
-    tree.write("status.xml")
-    return
-
+        parser = ET.XMLParser()
+        parser.feed ("<IPaddress>" + userID + "</IPaddress>" )
+        IPaddressElement = parser.close()
+        
+        lastModifiedTime =  datetime.now() 
+        lastModifiedTime = lastModifiedTime.strftime('%a, %d %b %Y %H:%M:%S GMT')  
+        parser = ET.XMLParser()
+        parser.feed ("<lastModified>" + lastModifiedTime + "</lastModified>")
+        lastModifiedElement = parser.close()
+        
+        ip_in_likes.append(IPaddressElement)
+        lastModified.text = lastModifiedElement.text 
+        
+        tree.write("status.xml")
+        
 def cache_for_updatePage () :
     tree = ET.parse("status.xml")
     root = tree.getroot()
