@@ -36,8 +36,9 @@ public class possiblemoves extends HttpServlet {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
         JSONObject GameState = (JSONObject) session.getAttribute("GameState");
+        Game game = new Game(GameState);
         
-        
+        //call Game object to compute possible moves
         try {
             if (GameState==null) {
 
@@ -46,15 +47,8 @@ public class possiblemoves extends HttpServlet {
             }
             else {
 
-                String possibleMoves = "";
-                for ( int i = 1; i < 4 ; i++ ) {
-                    for ( int j = 1; j < 4 ; j++ ) {
-                        if ( GameState.get("x" + i + "y" +j) == "_"   ){
-                            possibleMoves += "x" + i + "y" + j + "\n";
-                        } 
-                    }
-                }
-                session.setAttribute("Possible Moves", possibleMoves);
+                String possibleMoves = game.possiblemoves();
+                GameState.put("Possible Moves", possibleMoves);
                 out.print(possibleMoves);
 
             }
@@ -84,19 +78,6 @@ public class possiblemoves extends HttpServlet {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
 
     /**
      * Returns a short description of the servlet.

@@ -40,6 +40,7 @@ public class state extends HttpServlet {
             
             JSONObject GameState = (JSONObject) session.getAttribute("GameState");
             
+            //compute the game state in text
             if (GameState==null) {
  
                 response.sendError(HttpServletResponse.SC_NOT_FOUND);
@@ -78,20 +79,6 @@ public class state extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        //processRequest(request, response);
     }
 
     /**

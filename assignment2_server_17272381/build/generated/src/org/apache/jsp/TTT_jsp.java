@@ -50,19 +50,79 @@ public final class TTT_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Tc Tac Toe Page</title>\n");
+      out.write("        <title>Tic Tac Toe Page</title>\n");
+      out.write("        <script>   \n");
+      out.write("            // update possiblemoves and won state before each action below\n");
+      out.write("            function istart() {\n");
+      out.write("                var xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.open(\"POST\", \"http://localhost:8080/assignment2_server_17272381/ttt/istart;jsessionid=");
+      out.print(session.getId());
+      out.write("\", false );\n");
+      out.write("                xhttp.send();\n");
+      out.write("                xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.open(\"GET\", \"http://localhost:8080/assignment2_server_17272381/ttt/possiblemoves;jsessionid=");
+      out.print(session.getId());
+      out.write("\", false );\n");
+      out.write("                xhttp.send();\n");
+      out.write("                xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.open(\"GET\", \"http://localhost:8080/assignment2_server_17272381/ttt/won;jsessionid=");
+      out.print(session.getId());
+      out.write("\", false );\n");
+      out.write("                xhttp.send();\n");
+      out.write("                window.location.replace(\"http://localhost:8080/assignment2_server_17272381/TTT.jsp;jsessionid=");
+      out.print(session.getId());
+      out.write("\");\n");
+      out.write("              }\n");
+      out.write("              \n");
+      out.write("              function ustart() {\n");
+      out.write("                var xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.open(\"POST\", \"http://localhost:8080/assignment2_server_17272381/ttt/ustart;jsessionid=");
+      out.print(session.getId());
+      out.write("\", false );\n");
+      out.write("                xhttp.send();\n");
+      out.write("                xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.open(\"GET\", \"http://localhost:8080/assignment2_server_17272381/ttt/possiblemoves;jsessionid=");
+      out.print(session.getId());
+      out.write("\", false );\n");
+      out.write("                xhttp.send();\n");
+      out.write("                xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.open(\"GET\", \"http://localhost:8080/assignment2_server_17272381/ttt/won;jsessionid=");
+      out.print(session.getId());
+      out.write("\", false );\n");
+      out.write("                xhttp.send();\n");
+      out.write("                window.location.replace(\"http://localhost:8080/assignment2_server_17272381/TTT.jsp;jsessionid=");
+      out.print(session.getId());
+      out.write("\");\n");
+      out.write("              }\n");
+      out.write("              \n");
+      out.write("            function move(i,j){\n");
+      out.write("                var xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.open(\"POST\", \"http://localhost:8080/assignment2_server_17272381/ttt/move/\" + \"x\" + i + \"y\" + j + \";jsessionid=");
+      out.print(session.getId());
+      out.write("\", false );\n");
+      out.write("                xhttp.send();\n");
+      out.write("                xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.open(\"GET\", \"http://localhost:8080/assignment2_server_17272381/ttt/possiblemoves;jsessionid=");
+      out.print(session.getId());
+      out.write("\", false );\n");
+      out.write("                xhttp.send();\n");
+      out.write("                xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.open(\"GET\", \"http://localhost:8080/assignment2_server_17272381/ttt/won;jsessionid=");
+      out.print(session.getId());
+      out.write("\", false );\n");
+      out.write("                xhttp.send();\n");
+      out.write("                window.location.reload();\n");
+      out.write("            }  \n");
+      out.write("\n");
+      out.write("        </script>\n");
+      out.write("\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        \n");
-      out.write("        \n");
       out.write("        <h1>Tc Tac Toe</h1>\n");
-      out.write("\n");
-      out.write("        <form method = post action= \"ttt/istart\" >\n");
-      out.write("            <input type=\"submit\" value=\"Player Start\">\n");
-      out.write("        </form> \n");
-      out.write("        <form method = post action=\"ttt/ustart\">\n");
-      out.write("            <input type=\"submit\" value=\"Computer Start\">\n");
-      out.write("        </form>\n");
+      out.write("        \n");
+      out.write("        <input id = \"istart\" type=\"button\" value=\"Player Start\" onclick= istart() >\n");
+      out.write("        <br>\n");
+      out.write("        <input id = \"ustart\" type=\"button\" value=\"Computer Start\" onclick= ustart()>\n");
       out.write("        <br>\n");
       out.write("        <p>Game Board</p>\n");
       out.write("        ");
@@ -71,52 +131,49 @@ public final class TTT_jsp extends org.apache.jasper.runtime.HttpJspBase
             JSONObject GameState = (JSONObject) session.getAttribute("GameState");
             String txt = "";
             String won = "";
-            txt += "\"<table>";
+            String possiblemoves = "" ;
+            txt += "<table>";
             if (GameState != null) {
+                possiblemoves = (String) GameState.get("Possible Moves");
                 won =  (String) GameState.get("won");
                 for ( int i = 1; i < 4 ; i++ ) {
                     txt += "<tr>";
                     for ( int j = 1; j < 4 ; j++ ) {
                         txt += "<td>";
-                        if ( GameState.get("won") == "game is ongoing" ) {
-                            txt += "<form id= \\\"move" + "x" + i + "y" +j + "\\\"action=\\\"ttt/move/" + "x" + i + "y" +j + ";jsessionid=" + session.getId() + "\\\" method= post>" ;
-                            txt += "<a href=\\\"javascript:;\\\" onclick=\\\"document.getElementById('move" + "x" + i + "y" + j +  "').submit();\\\">" ;
+                        if ( GameState.get("won") == "game is ongoing" && possiblemoves.contains("x" + i + "y" +j)) {
+                            txt += "<a href  id= \"move" + "x" + i + "y" +j + "\" onclick= move(" + i + "," + j + ")>" ;
                         }
                         if ( GameState.get("x" + i + "y" +j) == "_"  ){
-                            txt += "<img src=\\\"bar.png\\\" width=\\\"50\\\" height=\\\"50\\\"  />";
+                            txt += "<img src=\"bar.png\" width=\"50\" height=\"50\"  />";
                         } 
                         else if ( GameState.get("x" + i + "y" +j) == "X"  ){
-                            txt += "<img src=\\\"cross.png\\\" width=\\\"50\\\" height=\\\"50\\\"  />";
+                            txt += "<img src=\"cross.png\" width=\"50\" height=\"50\"  />";
                         }
                         else if ( GameState.get("x" + i + "y" +j) == "O"  ){
-                            txt += "<img src=\\\"nought.png\\\" width=\\\"50\\\" height=\\\"50\\\"  />";
+                            txt += "<img src=\"nought.png\" width=\"50\" height=\"50\"  />";
                         }
-                        txt += "</a>";
-                        txt += "</form>";
+                        if ( GameState.get("won") == "game is ongoing" ) {
+                            txt += "</a>";
+                        }
                         txt += "</td>";
                     }
                     txt += "</tr>";
                 }    
             }
             
-            txt += "</table>\"";
+            txt += "</table>";
+            out.println(txt);
             
         
       out.write("\n");
-      out.write("        \n");
-      out.write("        \n");
-      out.write("        \n");
-      out.write("        <section id =\"state\"></section>\n");
-      out.write("        <p>Winner</p>\n");
-      out.write("        <Strong>");
-      out.print( won);
-      out.write("</Strong>\n");
-      out.write("        <script>\n");
-      out.write("            document.getElementById(\"state\").innerHTML = ");
-      out.print(txt);
       out.write("\n");
-      out.write("        </script>\n");
+      out.write("        <p>Winner</p>\n");
+      out.write("        <Strong id = \"winner\">");
+      out.print(won);
+      out.write("</Strong>\n");
+      out.write("        \n");
       out.write("    </body>\n");
+      out.write("\n");
       out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
