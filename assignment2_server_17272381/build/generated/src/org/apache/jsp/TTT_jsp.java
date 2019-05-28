@@ -52,6 +52,19 @@ public final class TTT_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Tic Tac Toe Page</title>\n");
       out.write("        <script>   \n");
+      out.write("            function displayState() {\n");
+      out.write("                var xhttp = new XMLHttpRequest();\n");
+      out.write("                xhttp.onreadystatechange = function() {\n");
+      out.write("                    if (this.readyState == 4 && this.status == 200) {\n");
+      out.write("                        document.getElementById(\"state\").innerHTML = this.responseText.toString().replace(\"\\r\\n\",\"<br>\").replace(\"\\r\\n\",\"<br>\");\n");
+      out.write("                    }\n");
+      out.write("                };\n");
+      out.write("                xhttp.open(\"GET\", \"http://localhost:8080/assignment2_server_17272381/ttt/state;jsessionid=");
+      out.print(session.getId());
+      out.write("?format=txt\", true);\n");
+      out.write("                xhttp.send();\n");
+      out.write("             }\n");
+      out.write("            \n");
       out.write("            // update possiblemoves and won state before each action below\n");
       out.write("            function istart() {\n");
       out.write("                var xhttp = new XMLHttpRequest();\n");
@@ -124,7 +137,7 @@ public final class TTT_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <br>\n");
       out.write("        <input id = \"ustart\" type=\"button\" value=\"Computer Start\" onclick= ustart()>\n");
       out.write("        <br>\n");
-      out.write("        <p>Game Board</p>\n");
+      out.write("        <p>Game Board , Click img to move</p>\n");
       out.write("        ");
 
             
@@ -166,7 +179,9 @@ public final class TTT_jsp extends org.apache.jasper.runtime.HttpJspBase
             
         
       out.write("\n");
-      out.write("\n");
+      out.write("        <p>Game Board displayed by ttt/state?format=txt</p>\n");
+      out.write("        <p id =\"state\"></p>\n");
+      out.write("        <script>displayState();</script>\n");
       out.write("        <p>Winner</p>\n");
       out.write("        <Strong id = \"winner\">");
       out.print(won);
