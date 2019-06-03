@@ -1,8 +1,6 @@
-<data ipAddress="http://localhost:8082" userID="user3">
+<?xml version='1.0' encoding='UTF-8'?>
+<data ipAddress="http://localhost:8083" userID="user3">
 
 <friendlist>
-<IPaddress>http://localhost:8080</IPaddress>
-<IPaddress>http://localhost:8081</IPaddress>
-</friendlist>
-
-<status><lastModified>Sun, 14 Apr 2019 18:09:00 GMT</lastModified><timestamp>Sun, 14 Apr 2019 18:07:24 GMT</timestamp><content>11*br*</content><likes><IPaddress>http://localhost:8081</IPaddress><IPaddress>http://localhost:8080</IPaddress></likes></status><status><lastModified>Mon, 15 Apr 2019 18:53:57 GMT</lastModified><timestamp>Sun, 14 Apr 2019 18:07:25 GMT</timestamp><content>22*br*</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8081</IPaddress></likes></status><status><lastModified>Sun, 14 Apr 2019 18:27:44 GMT</lastModified><timestamp>Sun, 14 Apr 2019 18:07:26 GMT</timestamp><content>33*br*</content><likes><IPaddress>http://localhost:8080</IPaddress><IPaddress>http://localhost:8081</IPaddress></likes></status></data>
+<IPaddress>http://localhost:8082</IPaddress>
+</friendlist></data>

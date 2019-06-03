@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<data ipAddress="http://localhost:8080" userID="cache">
+
+<user userID="user1">
+<IPaddress>http://localhost:8081</IPaddress>
+<cacheDate>Sat, 27 Apr 2019 12:21:34 GMT</cacheDate>
+</user>
+
+<user userID="user2">
+<IPaddress>http://localhost:8082</IPaddress>
+<cacheDate>Sat, 27 Apr 2019 12:36:07 GMT</cacheDate>
+</user>
+
+<user userID="user3">
+<IPaddress>http://localhost:8083</IPaddress>
+<cacheDate>Sat, 27 Apr 2019 12:22:28 GMT</cacheDate>
+</user>
+
+</data>
